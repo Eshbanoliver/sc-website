@@ -103,23 +103,12 @@ export default function Navbar({ onOpenConsultation }) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#093965] to-[#2E8D9F] flex items-center justify-center text-white shadow-md shadow-[#093965]/20 group-hover:scale-105 transition-transform">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <div>
-              <div className="flex items-center gap-1">
-                <span className="text-xl sm:text-2xl font-black text-[#093965] tracking-tight">
-                  STAFF<span className="text-[#2E8D9F]">CLICKS</span>
-                </span>
-                <span className="w-2 h-2 rounded-full bg-[#FA7D3C]"></span>
-              </div>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 -mt-1 hidden sm:block">
-                Virtual Staffing & BPO
-              </p>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group py-1">
+            <img 
+              src="/logo.png" 
+              alt="Staff Clicks - Empowering Teams" 
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
+            />
           </Link>
 
           {/* Desktop Navigation */}

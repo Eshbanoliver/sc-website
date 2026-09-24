@@ -50,15 +50,12 @@ export default function Footer({ onOpenConsultation }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           {/* Column 1: Company Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2E8D9F] to-[#093965] flex items-center justify-center text-white shadow-md border border-white/10">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <span className="text-xl font-black text-white tracking-tight">
-                STAFF<span className="text-[#3cb4cb]">CLICKS</span>
-              </span>
+            <Link to="/" className="inline-flex items-center p-2 px-3 rounded-2xl bg-white shadow-md hover:opacity-95 transition-opacity">
+              <img 
+                src="/logo.png" 
+                alt="Staff Clicks - Empowering Teams" 
+                className="h-9 sm:h-11 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
