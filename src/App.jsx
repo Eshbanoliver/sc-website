@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/ConsultationModal";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 // Pages
 import Home from "./pages/Home";
@@ -71,6 +73,10 @@ export default function App() {
           onClose={() => setIsConsultationOpen(false)}
           prefilledService={modalService}
         />
+
+        {/* Floating Actions */}
+        <FloatingWhatsApp />
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );
