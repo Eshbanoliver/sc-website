@@ -104,16 +104,35 @@ export default function WhyStaffClicks({ onOpenConsultation }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((feat, idx) => {
             const Icon = feat.icon;
+            const num = `0${idx + 1}`;
             return (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="relative p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/90 hover:border-[#2E8D9F] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_36px_rgba(9,57,101,0.08)] hover:-translate-y-1.5 overflow-hidden group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#093965]/10 text-[#093965] flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6" />
+                {/* Large semi-transparent background number */}
+                <span className="absolute -bottom-4 -right-2 text-7xl sm:text-8xl font-black font-mono text-slate-100/90 group-hover:text-[#2E8D9F]/10 transition-colors pointer-events-none select-none">
+                  {num}
+                </span>
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-13 h-13 rounded-full bg-[#093965]/8 text-[#093965] group-hover:bg-[#093965] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-xs">
+                      <Icon className="w-6 h-6 transition-transform group-hover:scale-110" />
+                    </div>
+                    <span className="text-xs font-mono font-bold text-slate-400">
+                      // {num}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-black text-[#093965] group-hover:text-[#2E8D9F] transition-colors mb-2 tracking-wide uppercase">
+                    {feat.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {feat.desc}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-[#093965] mb-2">{feat.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{feat.desc}</p>
               </div>
             );
           })}
