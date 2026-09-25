@@ -104,10 +104,17 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((item, idx) => {
             const Icon = item.icon;
+            const shadowClasses = [
+              "card-shadow-teal",
+              "card-shadow-orange",
+              "card-shadow-blue",
+              "card-shadow-purple"
+            ];
+            const cardShadow = shadowClasses[idx % shadowClasses.length];
             return (
               <div
                 key={idx}
-                className="p-7 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"
+                className={`p-7 rounded-2xl bg-white border border-slate-200/90 ${cardShadow} transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between`}
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-[#093965]/8 text-[#093965] flex items-center justify-center mb-5">

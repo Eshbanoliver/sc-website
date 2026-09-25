@@ -209,18 +209,27 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
         />
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {service.benefits.map((b, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all shadow-sm"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#093965]/10 text-[#093965] flex items-center justify-center font-bold text-sm mb-4">
-                0{idx + 1}
+          {service.benefits.map((b, idx) => {
+            const shadowList = [
+              "card-shadow-blue",
+              "card-shadow-teal",
+              "card-shadow-orange",
+              "card-shadow-purple"
+            ];
+            const shadow = shadowList[idx % shadowList.length];
+            return (
+              <div
+                key={idx}
+                className={`p-6 rounded-2xl bg-white border border-slate-200/90 ${shadow} transition-all duration-300 hover:-translate-y-1`}
+              >
+                <div className="w-10 h-10 rounded-xl bg-[#093965]/10 text-[#093965] flex items-center justify-center font-bold text-sm mb-4">
+                  0{idx + 1}
+                </div>
+                <h4 className="text-base font-bold text-[#093965] mb-2">{b.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{b.desc}</p>
               </div>
-              <h4 className="text-base font-bold text-[#093965] mb-2">{b.title}</h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{b.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -244,11 +253,18 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {otherServices.map((other) => (
-            <div
-              key={other.id}
-              className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all shadow-xs flex flex-col justify-between"
-            >
+          {otherServices.map((other, idx) => {
+            const otherShadows = [
+              "card-shadow-cyan",
+              "card-shadow-emerald",
+              "card-shadow-rose"
+            ];
+            const shadow = otherShadows[idx % otherShadows.length];
+            return (
+              <div
+                key={other.id}
+                className={`p-5 rounded-2xl bg-white border border-slate-200/90 ${shadow} transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between`}
+              >
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                   {other.badge}
@@ -269,7 +285,8 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
                 </Link>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
       </section>
     </div>

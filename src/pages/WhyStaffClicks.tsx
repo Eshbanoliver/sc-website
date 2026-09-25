@@ -111,10 +111,19 @@ export default function WhyStaffClicks({ onOpenConsultation }: WhyStaffClicksPro
           {pillars.map((feat, idx) => {
             const Icon = feat.icon;
             const num = `0${idx + 1}`;
+            const shadowClasses = [
+              "card-shadow-blue",
+              "card-shadow-teal",
+              "card-shadow-orange",
+              "card-shadow-purple",
+              "card-shadow-emerald",
+              "card-shadow-rose"
+            ];
+            const cardShadow = shadowClasses[idx % shadowClasses.length];
             return (
               <div
                 key={idx}
-                className="relative p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/90 hover:border-[#2E8D9F] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_36px_rgba(9,57,101,0.08)] hover:-translate-y-1.5 overflow-hidden group"
+                className={`relative p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/90 ${cardShadow} transition-all duration-300 hover:-translate-y-1.5 overflow-hidden group`}
               >
                 {/* Large semi-transparent background number */}
                 <span className="absolute -bottom-4 -right-2 text-7xl sm:text-8xl font-black font-mono text-slate-100/90 group-hover:text-[#2E8D9F]/10 transition-colors pointer-events-none select-none">

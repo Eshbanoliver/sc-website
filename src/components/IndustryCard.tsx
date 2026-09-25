@@ -30,18 +30,18 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Store
 };
 
-// Distinct theme accents for industry tiles
+// Distinct theme accents for industry tiles with vibrant background shadows
 const INDUSTRY_ACCENTS = [
-  { line: "bg-[#093965]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-blue-50/50 group-hover:to-white", border: "hover:border-[#093965]", iconColor: "text-[#093965]", arrowColor: "group-hover:text-[#093965]" },
-  { line: "bg-[#2E8D9F]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-teal-50/50 group-hover:to-white", border: "hover:border-[#2E8D9F]", iconColor: "text-[#2E8D9F]", arrowColor: "group-hover:text-[#2E8D9F]" },
-  { line: "bg-[#FA7D3C]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-orange-50/50 group-hover:to-white", border: "hover:border-[#FA7D3C]", iconColor: "text-[#FA7D3C]", arrowColor: "group-hover:text-[#FA7D3C]" },
-  { line: "bg-sky-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-sky-50/50 group-hover:to-white", border: "hover:border-sky-600", iconColor: "text-sky-600", arrowColor: "group-hover:text-sky-600" },
-  { line: "bg-emerald-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-emerald-50/50 group-hover:to-white", border: "hover:border-emerald-600", iconColor: "text-emerald-600", arrowColor: "group-hover:text-emerald-600" },
-  { line: "bg-indigo-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-indigo-50/50 group-hover:to-white", border: "hover:border-indigo-600", iconColor: "text-indigo-600", arrowColor: "group-hover:text-indigo-600" },
-  { line: "bg-rose-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-rose-50/50 group-hover:to-white", border: "hover:border-rose-600", iconColor: "text-rose-600", arrowColor: "group-hover:text-rose-600" },
-  { line: "bg-[#062644]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-slate-100/70 group-hover:to-white", border: "hover:border-[#093965]", iconColor: "text-[#062644]", arrowColor: "group-hover:text-[#093965]" },
-  { line: "bg-teal-700", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-teal-50/60 group-hover:to-white", border: "hover:border-teal-700", iconColor: "text-teal-700", arrowColor: "group-hover:text-teal-700" },
-  { line: "bg-amber-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-amber-50/50 group-hover:to-white", border: "hover:border-amber-600", iconColor: "text-amber-600", arrowColor: "group-hover:text-amber-600" }
+  { line: "bg-[#093965]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-blue-50/50 group-hover:to-white", border: "hover:border-[#093965]", shadowClass: "card-shadow-blue", iconColor: "text-[#093965]", arrowColor: "group-hover:text-[#093965]" },
+  { line: "bg-[#2E8D9F]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-teal-50/50 group-hover:to-white", border: "hover:border-[#2E8D9F]", shadowClass: "card-shadow-teal", iconColor: "text-[#2E8D9F]", arrowColor: "group-hover:text-[#2E8D9F]" },
+  { line: "bg-[#FA7D3C]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-orange-50/50 group-hover:to-white", border: "hover:border-[#FA7D3C]", shadowClass: "card-shadow-orange", iconColor: "text-[#FA7D3C]", arrowColor: "group-hover:text-[#FA7D3C]" },
+  { line: "bg-sky-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-sky-50/50 group-hover:to-white", border: "hover:border-sky-600", shadowClass: "card-shadow-cyan", iconColor: "text-sky-600", arrowColor: "group-hover:text-sky-600" },
+  { line: "bg-emerald-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-emerald-50/50 group-hover:to-white", border: "hover:border-emerald-600", shadowClass: "card-shadow-emerald", iconColor: "text-emerald-600", arrowColor: "group-hover:text-emerald-600" },
+  { line: "bg-indigo-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-indigo-50/50 group-hover:to-white", border: "hover:border-indigo-600", shadowClass: "card-shadow-purple", iconColor: "text-indigo-600", arrowColor: "group-hover:text-indigo-600" },
+  { line: "bg-rose-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-rose-50/50 group-hover:to-white", border: "hover:border-rose-600", shadowClass: "card-shadow-rose", iconColor: "text-rose-600", arrowColor: "group-hover:text-rose-600" },
+  { line: "bg-[#062644]", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-slate-100/70 group-hover:to-white", border: "hover:border-[#093965]", shadowClass: "card-shadow-indigo", iconColor: "text-[#062644]", arrowColor: "group-hover:text-[#093965]" },
+  { line: "bg-fuchsia-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-fuchsia-50/60 group-hover:to-white", border: "hover:border-fuchsia-600", shadowClass: "card-shadow-fuchsia", iconColor: "text-fuchsia-600", arrowColor: "group-hover:text-fuchsia-600" },
+  { line: "bg-amber-600", hoverBg: "group-hover:bg-gradient-to-b group-hover:from-amber-50/50 group-hover:to-white", border: "hover:border-amber-600", shadowClass: "card-shadow-amber", iconColor: "text-amber-600", arrowColor: "group-hover:text-amber-600" }
 ];
 
 interface IndustryCardProps {
@@ -55,7 +55,7 @@ export default function IndustryCard({ industry, index = 0, compact = false }: I
   const accent = INDUSTRY_ACCENTS[index % INDUSTRY_ACCENTS.length];
 
   return (
-    <div className={`group relative flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white ${accent.hoverBg} border border-slate-200/90 ${accent.border} transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_14px_30px_rgba(9,57,101,0.08)] hover:-translate-y-1.5 overflow-hidden`}>
+    <div className={`group relative flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white ${accent.hoverBg} border border-slate-200/90 ${accent.border} ${accent.shadowClass} transition-all duration-300 hover:-translate-y-1.5 overflow-hidden`}>
       {/* Top colored accent line */}
       <div className={`absolute top-0 left-0 right-0 h-1.5 ${accent.line} transition-transform duration-300`}></div>
 

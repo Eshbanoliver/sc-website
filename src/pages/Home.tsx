@@ -391,7 +391,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
 
               {/* 3 Core Benefits with distinct cards */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
-                <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-[#2E8D9F] transition-all">
+                <div className="p-5 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-500/60 card-shadow-blue transition-all duration-300 hover:-translate-y-1">
                   <div className="w-9 h-9 rounded-lg bg-[#093965]/10 text-[#093965] flex items-center justify-center font-black text-sm mb-3">
                     01
                   </div>
@@ -403,7 +403,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                   </p>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-[#2E8D9F] transition-all">
+                <div className="p-5 rounded-2xl bg-white border border-slate-200/90 hover:border-teal-500/60 card-shadow-teal transition-all duration-300 hover:-translate-y-1">
                   <div className="w-9 h-9 rounded-lg bg-[#2E8D9F]/15 text-[#2E8D9F] flex items-center justify-center font-black text-sm mb-3">
                     02
                   </div>
@@ -415,7 +415,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                   </p>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-[#FA7D3C]/50 transition-all">
+                <div className="p-5 rounded-2xl bg-white border border-slate-200/90 hover:border-orange-500/60 card-shadow-orange transition-all duration-300 hover:-translate-y-1">
                   <div className="w-9 h-9 rounded-lg bg-[#FA7D3C]/15 text-[#FA7D3C] flex items-center justify-center font-black text-sm mb-3">
                     03
                   </div>
@@ -565,10 +565,19 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
           <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {whyChooseUsFeatures.map((feat, idx) => {
               const Icon = feat.icon;
+              const shadowClasses = [
+                "card-shadow-orange",
+                "card-shadow-teal",
+                "card-shadow-purple",
+                "card-shadow-blue",
+                "card-shadow-emerald",
+                "card-shadow-rose"
+              ];
+              const cardShadow = shadowClasses[idx % shadowClasses.length];
               return (
                 <div
                   key={idx}
-                  className="relative p-8 rounded-3xl bg-white border border-slate-200/90 hover:border-[#2E8D9F] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_36px_rgba(9,57,101,0.08)] hover:-translate-y-1.5 overflow-hidden group"
+                  className={`relative p-8 rounded-3xl bg-white border border-slate-200/90 ${cardShadow} transition-all duration-300 hover:-translate-y-1.5 overflow-hidden group`}
                 >
                   <span className="absolute -bottom-4 -right-2 text-7xl sm:text-8xl font-black font-mono text-slate-100/90 group-hover:text-[#2E8D9F]/10 transition-colors pointer-events-none select-none">
                     {feat.num}
@@ -619,20 +628,31 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
           />
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {outsourcingBenefits.map((b, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:border-[#2E8D9F] transition-all flex items-start gap-4"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#2E8D9F]/15 text-[#2E8D9F] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-5 h-5 text-[#2E8D9F]" />
+            {outsourcingBenefits.map((b, idx) => {
+              const benefitShadows = [
+                "card-shadow-cyan",
+                "card-shadow-purple",
+                "card-shadow-emerald",
+                "card-shadow-orange",
+                "card-shadow-rose",
+                "card-shadow-blue"
+              ];
+              const cardShadow = benefitShadows[idx % benefitShadows.length];
+              return (
+                <div
+                  key={idx}
+                  className={`p-6 rounded-2xl bg-white border border-slate-200/80 hover:border-[#2E8D9F] ${cardShadow} transition-all duration-300 hover:-translate-y-1 flex items-start gap-4`}
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[#2E8D9F]/15 text-[#2E8D9F] flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-5 h-5 text-[#2E8D9F]" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-[#093965] mb-1">{b.title}</h4>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{b.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#093965] mb-1">{b.title}</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{b.desc}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

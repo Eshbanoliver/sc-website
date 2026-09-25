@@ -109,10 +109,17 @@ export default function Careers(): React.JSX.Element {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((b, idx) => {
             const Icon = b.icon;
+            const shadowClasses = [
+              "card-shadow-blue",
+              "card-shadow-teal",
+              "card-shadow-orange",
+              "card-shadow-purple"
+            ];
+            const cardShadow = shadowClasses[idx % shadowClasses.length];
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all shadow-sm"
+                className={`p-6 rounded-2xl bg-white border border-slate-200/90 ${cardShadow} transition-all duration-300 hover:-translate-y-1.5`}
               >
                 <div className="w-11 h-11 rounded-xl bg-[#093965]/8 text-[#093965] flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5" />
@@ -134,24 +141,35 @@ export default function Careers(): React.JSX.Element {
         />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {careerTracks.map((track, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#2E8D9F] transition-all shadow-sm flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-[#2E8D9F]/15 text-[#2E8D9F] flex items-center justify-center mb-4">
-                  <Briefcase className="w-5 h-5" />
+          {careerTracks.map((track, idx) => {
+            const shadowClasses = [
+              "card-shadow-teal",
+              "card-shadow-orange",
+              "card-shadow-purple",
+              "card-shadow-blue",
+              "card-shadow-emerald",
+              "card-shadow-rose"
+            ];
+            const cardShadow = shadowClasses[idx % shadowClasses.length];
+            return (
+              <div
+                key={idx}
+                className={`p-6 rounded-2xl bg-white border border-slate-200/90 ${cardShadow} transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between`}
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#2E8D9F]/15 text-[#2E8D9F] flex items-center justify-center mb-4">
+                    <Briefcase className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#093965] mb-2">{track.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{track.desc}</p>
                 </div>
-                <h3 className="text-lg font-bold text-[#093965] mb-2">{track.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{track.desc}</p>
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span>Location: Ajmer Hub / Remote</span>
+                  <span className="text-[#FA7D3C] font-semibold">Active Pool</span>
+                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                <span>Location: Ajmer Hub / Remote</span>
-                <span className="text-[#FA7D3C] font-semibold">Active Pool</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

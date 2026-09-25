@@ -33,83 +33,92 @@ const CARD_THEMES = [
   {
     bg: "bg-gradient-to-br from-[#093965]/[0.05] via-white to-[#2E8D9F]/[0.03]",
     borderHover: "hover:border-[#093965]/60",
+    shadowClass: "card-shadow-blue",
     iconBg: "bg-[#093965]/10 text-[#093965]",
     iconHoverBg: "group-hover:bg-[#093965] group-hover:text-white",
     badgeBg: "bg-[#093965]/8 text-[#093965]",
-    accentGlow: "from-[#093965]/10 to-transparent",
+    accentGlow: "from-blue-600/25 to-transparent",
     accentDot: "bg-[#093965]"
   },
   {
     bg: "bg-gradient-to-br from-[#2E8D9F]/[0.07] via-white to-[#093965]/[0.02]",
     borderHover: "hover:border-[#2E8D9F]",
+    shadowClass: "card-shadow-teal",
     iconBg: "bg-[#2E8D9F]/15 text-[#226e7d]",
     iconHoverBg: "group-hover:bg-[#2E8D9F] group-hover:text-white",
     badgeBg: "bg-[#2E8D9F]/10 text-[#226e7d]",
-    accentGlow: "from-[#2E8D9F]/15 to-transparent",
+    accentGlow: "from-teal-500/25 to-transparent",
     accentDot: "bg-[#2E8D9F]"
   },
   {
     bg: "bg-gradient-to-br from-[#FA7D3C]/[0.06] via-white to-[#2E8D9F]/[0.03]",
     borderHover: "hover:border-[#FA7D3C]/70",
+    shadowClass: "card-shadow-orange",
     iconBg: "bg-[#FA7D3C]/12 text-[#e66b2a]",
     iconHoverBg: "group-hover:bg-[#FA7D3C] group-hover:text-white",
     badgeBg: "bg-[#FA7D3C]/10 text-[#e66b2a]",
-    accentGlow: "from-[#FA7D3C]/15 to-transparent",
+    accentGlow: "from-orange-500/25 to-transparent",
     accentDot: "bg-[#FA7D3C]"
   },
   {
     bg: "bg-gradient-to-br from-sky-500/[0.05] via-white to-[#093965]/[0.03]",
     borderHover: "hover:border-sky-500/70",
+    shadowClass: "card-shadow-cyan",
     iconBg: "bg-sky-100 text-sky-700",
     iconHoverBg: "group-hover:bg-sky-600 group-hover:text-white",
     badgeBg: "bg-sky-50 text-sky-700",
-    accentGlow: "from-sky-500/10 to-transparent",
+    accentGlow: "from-sky-500/25 to-transparent",
     accentDot: "bg-sky-500"
   },
   {
     bg: "bg-gradient-to-br from-[#062644]/[0.06] via-white to-[#FA7D3C]/[0.02]",
     borderHover: "hover:border-[#093965]",
+    shadowClass: "card-shadow-indigo",
     iconBg: "bg-[#093965]/10 text-[#093965]",
     iconHoverBg: "group-hover:bg-[#093965] group-hover:text-white",
     badgeBg: "bg-[#093965]/8 text-[#093965]",
-    accentGlow: "from-[#093965]/15 to-transparent",
+    accentGlow: "from-indigo-600/25 to-transparent",
     accentDot: "bg-[#093965]"
   },
   {
     bg: "bg-gradient-to-br from-[#2E8D9F]/[0.08] via-white to-emerald-500/[0.02]",
     borderHover: "hover:border-[#2E8D9F]",
+    shadowClass: "card-shadow-emerald",
     iconBg: "bg-[#2E8D9F]/15 text-[#2E8D9F]",
     iconHoverBg: "group-hover:bg-[#2E8D9F] group-hover:text-white",
     badgeBg: "bg-[#2E8D9F]/12 text-[#2E8D9F]",
-    accentGlow: "from-[#2E8D9F]/15 to-transparent",
+    accentGlow: "from-emerald-500/25 to-transparent",
     accentDot: "bg-[#2E8D9F]"
   },
   {
     bg: "bg-gradient-to-br from-indigo-500/[0.05] via-white to-[#2E8D9F]/[0.02]",
     borderHover: "hover:border-indigo-500/70",
+    shadowClass: "card-shadow-purple",
     iconBg: "bg-indigo-50 text-indigo-700",
     iconHoverBg: "group-hover:bg-indigo-600 group-hover:text-white",
     badgeBg: "bg-indigo-50 text-indigo-700",
-    accentGlow: "from-indigo-500/10 to-transparent",
+    accentGlow: "from-purple-500/25 to-transparent",
     accentDot: "bg-indigo-600"
   },
   {
     bg: "bg-gradient-to-br from-amber-500/[0.06] via-white to-[#093965]/[0.02]",
     borderHover: "hover:border-amber-500/70",
+    shadowClass: "card-shadow-amber",
     iconBg: "bg-amber-100 text-amber-800",
     iconHoverBg: "group-hover:bg-amber-600 group-hover:text-white",
     badgeBg: "bg-amber-50 text-amber-800",
-    accentGlow: "from-amber-500/15 to-transparent",
+    accentGlow: "from-amber-500/25 to-transparent",
     accentDot: "bg-amber-500"
   },
   {
-    bg: "bg-gradient-to-br from-teal-500/[0.06] via-white to-[#FA7D3C]/[0.02]",
-    borderHover: "hover:border-teal-600/70",
-    iconBg: "bg-teal-100 text-teal-800",
-    iconHoverBg: "group-hover:bg-teal-700 group-hover:text-white",
-    badgeBg: "bg-teal-50 text-teal-800",
-    accentGlow: "from-teal-500/15 to-transparent",
-    accentDot: "bg-teal-600"
+    bg: "bg-gradient-to-br from-rose-500/[0.06] via-white to-[#FA7D3C]/[0.02]",
+    borderHover: "hover:border-rose-500/70",
+    shadowClass: "card-shadow-rose",
+    iconBg: "bg-rose-100 text-rose-800",
+    iconHoverBg: "group-hover:bg-rose-600 group-hover:text-white",
+    badgeBg: "bg-rose-50 text-rose-800",
+    accentGlow: "from-rose-500/25 to-transparent",
+    accentDot: "bg-rose-500"
   }
 ];
 
@@ -124,7 +133,7 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps): R
 
   return (
     <div 
-      className={`group relative flex flex-col justify-between p-7 sm:p-8 rounded-2xl ${theme.bg} border border-slate-200/80 ${theme.borderHover} transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(9,57,101,0.08)] hover:-translate-y-1.5 overflow-hidden`}
+      className={`group relative flex flex-col justify-between p-7 sm:p-8 rounded-2xl ${theme.bg} border border-slate-200/90 ${theme.borderHover} ${theme.shadowClass} transition-all duration-300 hover:-translate-y-1.5 overflow-hidden`}
     >
       {/* Decorative gradient corner element that glows on hover */}
       <div 
