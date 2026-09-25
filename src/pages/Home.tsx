@@ -23,6 +23,7 @@ import ServiceCard from "../components/ServiceCard";
 import IndustryCard from "../components/IndustryCard";
 import GlobalMapGraphic from "../components/GlobalMapGraphic";
 import FAQAccordion from "../components/FAQAccordion";
+import BookingCalendar from "../components/BookingCalendar";
 import { SERVICES } from "../data/servicesData";
 import { INDUSTRIES } from "../data/industriesData";
 
@@ -475,6 +476,11 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
             </button>
           </div>
         </div>
+      </section>
+
+      {/* INTERACTIVE CALENDAR BOOKING FOR WHATSAPP */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <BookingCalendar />
       </section>
 
       {/* HOW IT WORKS */}
