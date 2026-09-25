@@ -162,7 +162,8 @@ export default function WhyStaffClicks({ onOpenConsultation }: WhyStaffClicksPro
           subtitle="Why established businesses choose managed remote support over erratic ad-hoc hiring."
         />
 
-        <div className="mt-12 overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm">
+        {/* Desktop Table View */}
+        <div className="mt-12 hidden md:block overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm">
           <table className="w-full text-left border-collapse min-w-[640px]">
             <thead>
               <tr className="bg-slate-50 border-b border-slate-200 text-xs uppercase tracking-wider font-extrabold text-slate-700">
@@ -195,6 +196,31 @@ export default function WhyStaffClicks({ onOpenConsultation }: WhyStaffClicksPro
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Responsive Cards View */}
+        <div className="mt-8 space-y-3.5 md:hidden">
+          {comparison.map((row, idx) => (
+            <div key={idx} className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2.5">
+              <div className="font-extrabold text-[#093965] text-sm">
+                {row.criteria}
+              </div>
+              <div className="p-3 rounded-xl bg-rose-50/80 border border-rose-100 flex items-start gap-2.5 text-xs text-slate-700">
+                <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-bold text-rose-900 block text-[10px] uppercase tracking-wider mb-0.5">Unvetted Freelancers</span>
+                  <span>{row.freelancer}</span>
+                </div>
+              </div>
+              <div className="p-3 rounded-xl bg-teal-50/80 border border-teal-100 flex items-start gap-2.5 text-xs text-slate-800">
+                <Check className="w-4 h-4 text-[#2E8D9F] shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-bold text-[#093965] block text-[10px] uppercase tracking-wider mb-0.5">Staff Clicks Managed Support</span>
+                  <span>{row.staffClicks}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

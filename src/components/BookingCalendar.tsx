@@ -165,32 +165,32 @@ export default function BookingCalendar(): React.JSX.Element {
   };
 
   return (
-    <div id="book-meeting" className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-slate-200/90 card-shadow-teal relative overflow-hidden">
+    <div id="book-meeting" className="p-4 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 card-shadow-teal relative overflow-hidden">
       {/* Decorative ambient background blur */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
       <div className="relative z-10">
         {/* Section Heading */}
-        <div className="max-w-3xl mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 text-teal-800 border border-teal-200/80 mb-3">
+        <div className="max-w-3xl mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 text-teal-800 border border-teal-200/80 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#2E8D9F]" />
             <span>Interactive Scheduling</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#093965] tracking-tight leading-tight">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-black text-[#093965] tracking-tight leading-tight">
             Book a One-on-One Discovery Call or Meeting
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="mt-2 text-xs sm:text-base text-slate-600 leading-relaxed">
             Pick your preferred date and time slot from our operational calendar below. Once selected, you'll be instantly redirected to WhatsApp with your reservation details pre-filled.
           </p>
         </div>
 
         {/* Step 1: Session Type Selector */}
-        <div className="mb-8">
-          <label className="block text-xs font-black uppercase tracking-wider text-slate-700 mb-3">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-xs font-black uppercase tracking-wider text-slate-700 mb-2 sm:mb-3">
             1. Select Session Format
           </label>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {SESSION_TYPES.map((type) => {
               const isSelected = selectedSession === type.id;
               return (
@@ -198,14 +198,14 @@ export default function BookingCalendar(): React.JSX.Element {
                   key={type.id}
                   type="button"
                   onClick={() => setSelectedSession(type.id)}
-                  className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
+                  className={`p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
                     isSelected
                       ? "bg-gradient-to-br from-[#093965] to-[#0e4c84] text-white border-[#093965] shadow-md ring-2 ring-[#2E8D9F]/40"
                       : "bg-slate-50/80 hover:bg-slate-100 text-slate-700 border-slate-200"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className={`text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md ${
+                    <span className={`text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md ${
                       isSelected ? "bg-white/20 text-white" : "bg-teal-100 text-teal-800"
                     }`}>
                       {type.duration}
@@ -225,9 +225,9 @@ export default function BookingCalendar(): React.JSX.Element {
         </div>
 
         {/* Main Scheduler Grid: Calendar (Left) + Time Slots & Details (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* CALENDAR COLUMN */}
-          <div className="lg:col-span-6 p-6 sm:p-7 rounded-2xl bg-slate-50/70 border border-slate-200">
+          <div className="lg:col-span-6 p-3.5 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <span className="text-xs font-black uppercase tracking-wider text-slate-700 block">
@@ -333,7 +333,7 @@ export default function BookingCalendar(): React.JSX.Element {
           {/* TIME SLOTS & CONTACT DETAILS COLUMN */}
           <div className="lg:col-span-6 space-y-6">
             {/* Time Slot Picker */}
-            <div className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200">
+            <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                 <label className="text-xs font-black uppercase tracking-wider text-slate-700">
                   3. Select Time Slot
@@ -372,7 +372,7 @@ export default function BookingCalendar(): React.JSX.Element {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
                 {TIME_SLOTS.map((slot) => {
                   const isSelected = selectedSlot === slot.time;
                   return (
@@ -400,7 +400,7 @@ export default function BookingCalendar(): React.JSX.Element {
             </div>
 
             {/* Optional Quick Info */}
-            <form onSubmit={handleBookOnWhatsApp} className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200 space-y-4">
+            <form onSubmit={handleBookOnWhatsApp} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200 space-y-4">
               <label className="block text-xs font-black uppercase tracking-wider text-slate-700">
                 4. Your Details (Optional)
               </label>

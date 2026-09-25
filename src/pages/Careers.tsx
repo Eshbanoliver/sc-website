@@ -175,7 +175,7 @@ export default function Careers(): React.JSX.Element {
 
       {/* RESUME SUBMISSION / TALENT NETWORK FORM */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-md">
+        <div className="p-5 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-md">
           <div className="text-center max-w-xl mx-auto mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-[#FA7D3C]">
               Express Your Interest

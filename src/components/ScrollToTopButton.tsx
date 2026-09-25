@@ -30,7 +30,7 @@ export default function ScrollToTopButton(): React.JSX.Element | null {
   return (
     <aside 
       aria-label="Page navigation"
-      className="fixed bottom-6 right-6 z-40 flex items-center group select-none"
+      className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex items-center group select-none"
     >
       {/* Tooltip / Label on Left of Button */}
       <div 
@@ -45,7 +45,7 @@ export default function ScrollToTopButton(): React.JSX.Element | null {
         onClick={scrollToTop}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative flex items-center justify-center w-13 h-13 rounded-full bg-gradient-to-br from-[#093965] to-[#2E8D9F] text-white shadow-[0_8px_24px_rgba(9,57,101,0.35)] hover:shadow-[0_12px_28px_rgba(9,57,101,0.5)] border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#2E8D9F]/40 cursor-pointer"
+        className="relative flex items-center justify-center w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-gradient-to-br from-[#093965] to-[#2E8D9F] text-white shadow-[0_6px_20px_rgba(9,57,101,0.35)] hover:shadow-[0_12px_28px_rgba(9,57,101,0.5)] border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#2E8D9F]/40 cursor-pointer"
         aria-label="Scroll to top of page"
       >
         <ChevronUp className="w-6 h-6 transition-transform duration-200 group-hover:-translate-y-0.5" />

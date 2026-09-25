@@ -155,7 +155,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[62px] font-black text-[#093965] tracking-tight leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[62px] font-black text-[#093965] tracking-tight leading-[1.1]">
                 Your Trusted Workforce for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#093965] via-[#2E8D9F] to-[#FA7D3C]">
                   Smarter Business
@@ -164,7 +164,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               </h1>
 
               {/* Supporting Copy */}
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-normal">
                 Staff Clicks helps businesses streamline everyday operations with reliable virtual assistance, business process support, and skilled remote professionals.
               </p>
 
@@ -203,17 +203,17 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
             </div>
 
             {/* Right Visual: Operations Dashboard & Floating Badges */}
-            <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-5 relative mt-6 lg:mt-0">
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Floating UI Badge 1: Top-Left (Remote Support) */}
-                <div className="absolute -top-4 -left-4 sm:-left-8 z-20 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg text-xs font-bold text-[#093965] flex items-center gap-2 animate-soft-float">
+                <div className="absolute -top-3 left-1 sm:-left-6 z-20 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg text-[11px] sm:text-xs font-bold text-[#093965] flex items-center gap-1.5 sm:gap-2 animate-soft-float">
                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <Headphones className="w-3.5 h-3.5 text-[#2E8D9F]" />
                   <span>Remote Support</span>
                 </div>
 
                 {/* Floating UI Badge 2: Top-Right (24/7 Workflow) */}
-                <div className="absolute -top-6 -right-4 sm:-right-6 z-20 px-3.5 py-2 rounded-xl bg-[#093965] border border-[#2E8D9F]/40 shadow-xl text-xs font-bold text-white flex items-center gap-2 animate-soft-float-reverse">
+                <div className="absolute -top-4 right-1 sm:-right-6 z-20 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-[#093965] border border-[#2E8D9F]/40 shadow-xl text-[11px] sm:text-xs font-bold text-white flex items-center gap-1.5 sm:gap-2 animate-soft-float-reverse">
                   <Clock className="w-3.5 h-3.5 text-[#FA7D3C]" />
                   <span>24/7 Workflow</span>
                 </div>
@@ -302,24 +302,24 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                 </div>
 
                 {/* Floating UI Badge 3: Bottom-Left (Global Operations) */}
-                <div className="absolute -bottom-5 -left-4 sm:-left-6 z-20 px-3.5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl flex items-center gap-2.5 animate-soft-float">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#093965] flex items-center justify-center">
-                    <Globe2 className="w-4 h-4 text-[#2E8D9F]" />
+                <div className="absolute -bottom-4 left-1 sm:-left-6 z-20 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl flex items-center gap-2 animate-soft-float">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-50 text-[#093965] flex items-center justify-center shrink-0">
+                    <Globe2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2E8D9F]" />
                   </div>
                   <div>
-                    <div className="text-xs font-extrabold text-[#093965]">Global Operations</div>
-                    <div className="text-[10px] text-slate-500">Cross-Border Delivery</div>
+                    <div className="text-[11px] sm:text-xs font-extrabold text-[#093965]">Global Operations</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-500">Cross-Border Delivery</div>
                   </div>
                 </div>
 
                 {/* Floating UI Badge 4: Bottom-Right (Business Support) */}
-                <div className="absolute -bottom-6 -right-4 sm:-right-6 z-20 px-3.5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl flex items-center gap-2.5 animate-soft-float-reverse">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                    <ShieldCheck className="w-4 h-4" />
+                <div className="absolute -bottom-5 right-1 sm:-right-6 z-20 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl flex items-center gap-2 animate-soft-float-reverse">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-extrabold text-[#093965]">Business Support</div>
-                    <div className="text-[10px] text-slate-500">NDA Protected</div>
+                    <div className="text-[11px] sm:text-xs font-extrabold text-[#093965]">Business Support</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-500">NDA Protected</div>
                   </div>
                 </div>
               </div>
@@ -331,9 +331,9 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
       {/* TRUST / VALUE STRIP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 sm:-mt-16 relative z-20">
         <div className="rounded-2xl bg-white border border-slate-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.04)] p-6 sm:p-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
             {valueStripItems.map((item, idx) => (
-              <div key={idx} className={`pt-4 sm:pt-0 ${idx > 0 ? "sm:pl-6" : ""}`}>
+              <div key={idx} className={`pt-4 lg:pt-0 ${idx > 0 ? "lg:pl-6" : ""}`}>
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#FA7D3C]"></span>
                   <h4 className="text-sm font-extrabold text-[#093965]">{item.title}</h4>

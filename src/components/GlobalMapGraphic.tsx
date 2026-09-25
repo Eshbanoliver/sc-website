@@ -82,19 +82,19 @@ export default function GlobalMapGraphic(): React.JSX.Element {
             </svg>
 
             {/* Float Markers Overlaid */}
-            <div className="absolute top-2 left-6 sm:left-16 bg-[#062644]/90 border border-slate-700/80 px-3.5 py-1.5 rounded-full text-[11px] font-semibold text-slate-200 shadow-lg flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Canada: Remote BPO Reach
+            <div className="absolute top-2 left-2 sm:left-16 bg-[#062644]/90 border border-slate-700/80 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold text-slate-200 shadow-lg flex items-center gap-1.5 sm:gap-2">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400"></span>
+              <span>Canada</span>
             </div>
 
-            <div className="absolute bottom-6 left-12 sm:left-24 bg-[#062644]/90 border border-[#FA7D3C]/40 px-3.5 py-1.5 rounded-full text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#FA7D3C]"></span>
-              USA: Nationwide B2B Operations
+            <div className="absolute bottom-4 left-4 sm:left-24 bg-[#062644]/90 border border-[#FA7D3C]/40 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold text-white shadow-lg flex items-center gap-1.5 sm:gap-2">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#FA7D3C]"></span>
+              <span>USA</span>
             </div>
 
-            <div className="absolute bottom-8 right-6 sm:right-20 bg-[#062644]/90 border border-[#2E8D9F]/60 px-4 py-1.5 rounded-full text-[11px] font-bold text-[#3cb4cb] shadow-lg flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#3cb4cb]"></span>
-              India: Ajmer Operational Hub
+            <div className="absolute bottom-6 right-2 sm:right-20 bg-[#062644]/90 border border-[#2E8D9F]/60 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold text-[#3cb4cb] shadow-lg flex items-center gap-1.5 sm:gap-2">
+              <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#3cb4cb]"></span>
+              <span>India (Ajmer Hub)</span>
             </div>
           </div>
         </div>

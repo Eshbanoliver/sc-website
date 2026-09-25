@@ -39,6 +39,7 @@ interface NavbarProps {
 export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.Element {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<boolean>(false);
   const location = useLocation();
 
@@ -53,8 +54,21 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
   // Close mobile drawer on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
     setServicesDropdownOpen(false);
   }, [location.pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
 
   const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
     `text-sm font-semibold transition-colors duration-200 py-2 ${
@@ -63,36 +77,44 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
         : "text-slate-700 hover:text-[#093965]"
     }`;
 
+  const mobileNavLinkClasses = ({ isActive }: { isActive: boolean }) =>
+    `px-3.5 py-2.5 rounded-xl text-sm font-bold transition-all flex items-center justify-between ${
+      isActive
+        ? "bg-[#093965] text-white shadow-xs"
+        : "text-slate-700 hover:bg-slate-100"
+    }`;
+
   return (
     <>
       {/* Top micro bar for phone & service markets */}
-      <header className="w-full bg-[#062644] text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 sm:gap-4 overflow-x-auto">
-            <span className="flex items-center gap-1.5 font-medium text-slate-200">
+      <header className="w-full bg-[#062644] text-slate-300 text-xs py-2 px-3 sm:px-6 lg:px-8 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar whitespace-nowrap text-[11px] sm:text-xs">
+            <span className="flex items-center gap-1.5 font-medium text-slate-200 shrink-0">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Active Support Markets:
+              <span className="hidden xs:inline">Support:</span>
             </span>
-            <span className="text-slate-300 flex items-center gap-1">
-              <span className="font-semibold text-white">India</span> (Ajmer Hub)
-            </span>
-            <span className="text-slate-500">•</span>
-            <span className="text-slate-300">
-              <span className="font-semibold text-white">USA</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">India</strong> (Ajmer)
             </span>
             <span className="text-slate-500">•</span>
-            <span className="text-slate-300">
-              <span className="font-semibold text-white">Canada</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">USA</strong>
+            </span>
+            <span className="text-slate-500">•</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">Canada</strong>
             </span>
           </div>
 
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
             <a
               href="tel:+918302648461"
-              className="flex items-center gap-1.5 font-bold text-white hover:text-[#FA7D3C] transition-colors"
+              className="flex items-center gap-1.5 font-bold text-white hover:text-[#FA7D3C] transition-colors text-[11px] sm:text-xs whitespace-nowrap"
             >
               <PhoneCall className="w-3.5 h-3.5 text-[#FA7D3C]" />
-              <span>+91 83026 48461</span>
+              <span className="hidden sm:inline">+91 83026 48461</span>
+              <span className="sm:hidden font-extrabold text-[#FA7D3C]">Call Us</span>
             </a>
           </div>
         </div>
@@ -246,79 +268,80 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-6 space-y-3 shadow-xl">
-            <div className="flex flex-col space-y-2">
-              <NavLink
-                to="/"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                About Us
-              </NavLink>
-              <NavLink
-                to="/services"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                All Services
+          <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-8 space-y-3 shadow-2xl max-h-[calc(100dvh-70px)] overflow-y-auto overscroll-contain animate-in fade-in duration-200">
+            <div className="flex flex-col space-y-1">
+              <NavLink to="/" className={mobileNavLinkClasses} end>
+                <span>Home</span>
               </NavLink>
 
-              {/* Service Submenu items */}
-              <div className="pl-4 py-1 space-y-1 border-l-2 border-[#2E8D9F]/30 ml-2">
-                {SERVICES.map((srv) => (
-                  <Link
-                    key={srv.id}
-                    to={`/services/${srv.slug}`}
-                    className="block py-1 text-xs text-slate-600 hover:text-[#093965]"
+              <NavLink to="/about" className={mobileNavLinkClasses}>
+                <span>About Us</span>
+              </NavLink>
+
+              {/* Collapsible Mobile Services Section */}
+              <div className="rounded-xl overflow-hidden bg-slate-50/70 border border-slate-200/80">
+                <div className="flex items-center justify-between">
+                  <NavLink
+                    to="/services"
+                    className="flex-1 px-3.5 py-2.5 text-sm font-bold text-slate-700 hover:text-[#093965]"
                   >
-                    • {srv.title}
-                  </Link>
-                ))}
+                    Services Overview
+                  </NavLink>
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="px-3 py-2.5 text-slate-500 hover:text-[#093965] cursor-pointer"
+                    aria-label="Toggle services list"
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      mobileServicesOpen ? "rotate-180 text-[#FA7D3C]" : ""
+                    }`} />
+                  </button>
+                </div>
+
+                {mobileServicesOpen && (
+                  <div className="px-3 pb-3 pt-1 space-y-1 border-t border-slate-200/60 bg-white">
+                    {SERVICES.map((srv) => (
+                      <Link
+                        key={srv.id}
+                        to={`/services/${srv.slug}`}
+                        className="block px-2.5 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:text-[#093965] hover:bg-slate-50 transition-colors"
+                      >
+                        • {srv.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
 
-              <NavLink
-                to="/industries"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                Industries
+              <NavLink to="/industries" className={mobileNavLinkClasses}>
+                <span>Industries</span>
               </NavLink>
-              <NavLink
-                to="/why-staff-clicks"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                Why Staff Clicks
+
+              <NavLink to="/why-staff-clicks" className={mobileNavLinkClasses}>
+                <span>Why Staff Clicks</span>
               </NavLink>
-              <NavLink
-                to="/careers"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                Careers
+
+              <NavLink to="/careers" className={mobileNavLinkClasses}>
+                <span>Careers</span>
               </NavLink>
-              <NavLink
-                to="/faq"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                FAQ
+
+              <NavLink to="/faq" className={mobileNavLinkClasses}>
+                <span>FAQ</span>
               </NavLink>
-              <NavLink
-                to="/contact"
-                className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                Contact Us
+
+              <NavLink to="/contact" className={mobileNavLinkClasses}>
+                <span>Contact Us</span>
               </NavLink>
             </div>
 
-            <div className="pt-4 border-t border-slate-100 space-y-3">
+            <div className="pt-3 border-t border-slate-100 space-y-2.5">
               <a
                 href="tel:+918302648461"
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 text-sm font-bold text-[#093965]"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 text-sm font-bold text-[#093965] bg-slate-50/80 hover:bg-slate-100 transition-colors"
               >
                 <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                Call +91 83026 48461
+                <span>Call +91 83026 48461</span>
               </a>
 
               <button
@@ -326,9 +349,10 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
                   setMobileMenuOpen(false);
                   onOpenConsultation();
                 }}
-                className="w-full py-3 rounded-xl bg-[#FA7D3C] text-white text-sm font-bold shadow-md hover:bg-[#e66b2a] transition-colors cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#093965] to-[#2E8D9F] text-white text-sm font-bold shadow-md hover:opacity-95 transition-opacity cursor-pointer flex items-center justify-center gap-2"
               >
-                Get a Free Consultation
+                <span>Get a Free Consultation</span>
+                <Sparkles className="w-4 h-4 text-[#FA7D3C]" />
               </button>
             </div>
           </div>

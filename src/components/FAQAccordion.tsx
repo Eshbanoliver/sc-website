@@ -58,30 +58,30 @@ export default function FAQAccordion({ limit = null, initialCategory = "All" }: 
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                className="w-full px-4 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-3 sm:gap-4 cursor-pointer focus:outline-none"
                 aria-expanded={isOpen}
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 sm:gap-3">
                   <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
                     isOpen ? "bg-[#2E8D9F]/15 text-[#2E8D9F]" : "bg-slate-100 text-slate-400"
                   }`}>
                     <HelpCircle className="w-4 h-4" />
                   </span>
-                  <span className={`text-base sm:text-lg font-bold transition-colors ${
+                  <span className={`text-sm sm:text-base lg:text-lg font-bold transition-colors ${
                     isOpen ? "text-[#093965]" : "text-slate-800"
                   }`}>
                     {faq.question}
                   </span>
                 </div>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                   isOpen ? "rotate-180 bg-[#093965] text-white" : "bg-slate-100 text-slate-500"
                 }`}>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               </button>
 
               {isOpen && (
-                <div className="px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100">
+                <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-1 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed border-t border-slate-100">
                   <p>{faq.answer}</p>
                 </div>
               )}

@@ -29,13 +29,13 @@ export default function SectionHeader({
           {badge}
         </div>
       )}
-      <h2 className={`text-3xl sm:text-4xl lg:text-4.5xl font-extrabold tracking-tight leading-tight ${
+      <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-4.5xl font-extrabold tracking-tight leading-tight ${
         light ? "text-white" : "text-[#093965]"
       }`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-4 text-base sm:text-lg leading-relaxed ${
+        <p className={`mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed ${
           light ? "text-slate-300" : "text-slate-600"
         }`}>
           {subtitle}
