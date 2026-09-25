@@ -4,9 +4,12 @@ import {
   Mail, 
   MapPin, 
   Globe2, 
-  ShieldCheck 
+  ShieldCheck,
+  CalendarDays,
+  Send
 } from "lucide-react";
 import ContactForm from "../components/ContactForm";
+import BookingCalendar from "../components/BookingCalendar";
 import GlobalMapGraphic from "../components/GlobalMapGraphic";
 
 export default function Contact(): React.JSX.Element {
@@ -27,6 +30,23 @@ export default function Contact(): React.JSX.Element {
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
             Whether you are looking to hire a single executive virtual assistant or assemble an outsourced customer care team, we are here to support your growth.
           </p>
+
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#book-meeting"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all"
+            >
+              <CalendarDays className="w-4 h-4" />
+              <span>Book a Meeting on WhatsApp</span>
+            </a>
+            <a
+              href="#contact-form"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-bold border border-slate-200 transition-all"
+            >
+              <Send className="w-3.5 h-3.5 text-[#2E8D9F]" />
+              <span>Send Detailed Form</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -129,7 +149,7 @@ export default function Contact(): React.JSX.Element {
           </div>
 
           {/* Right: Validated Request Form */}
-          <div className="lg:col-span-7">
+          <div id="contact-form" className="lg:col-span-7 scroll-mt-24">
             <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-md space-y-6">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#FA7D3C]">
@@ -147,6 +167,11 @@ export default function Contact(): React.JSX.Element {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* INTERACTIVE CALENDAR BOOKING FOR WHATSAPP */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
+        <BookingCalendar />
       </section>
 
       {/* GLOBAL GRAPHIC */}
