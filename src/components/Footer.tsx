@@ -189,7 +189,11 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            ©️ Copyright 2026 | Staff Clicks | All Rights Reserved | Powered by{" "}
+            ©️ Copyright 2026 |{" "}
+            <Link to="/" className="text-white font-bold hover:text-[#FA7D3C] hover:underline transition-colors">
+              Staff Clicks
+            </Link>{" "}
+            | All Rights Reserved | Powered by{" "}
             <a
               href="https://www.futurexdigitalmarketing.com/"
               target="_blank"
