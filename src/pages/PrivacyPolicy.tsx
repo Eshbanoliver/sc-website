@@ -22,7 +22,7 @@ export default function PrivacyPolicy(): React.JSX.Element {
 
       <div className="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
         <p>
-          At <strong>Staff Clicks</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), we are deeply committed to respecting and protecting the privacy of our clients, website visitors, and remote personnel across India, the United States, and Canada. This Privacy Policy outlines how we collect, use, safeguard, and disclose information gathered through our website and business process outsourcing services.
+          At <strong>Staff Clicks</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), we are deeply committed to respecting and protecting the privacy of our clients, website visitors, and remote personnel across the UAE, the United States, and Canada. This Privacy Policy outlines how we collect, use, safeguard, and disclose information gathered through our website and business process outsourcing services.
         </p>
 
         <h3 className="text-lg font-bold text-[#093965] pt-2">1. Information We Collect</h3>
@@ -62,7 +62,7 @@ export default function PrivacyPolicy(): React.JSX.Element {
         </p>
         <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1">
           <div><strong>Staff Clicks</strong></div>
-          <div>Delivery Center: Ajmer, Rajasthan, India</div>
+          <div>Headquarters & Operations Hub: Dubai, United Arab Emirates (UAE)</div>
           <div>Phone: +91 83026 48461</div>
           <div>Email: contact@staffclicks.com</div>
         </div>

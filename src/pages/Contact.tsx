@@ -68,7 +68,7 @@ export default function Contact(): React.JSX.Element {
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-                      Direct Hotline (India / International)
+                      Direct Hotline (International)
                     </span>
                     <a
                       href="tel:+918302648461"
@@ -110,10 +110,10 @@ export default function Contact(): React.JSX.Element {
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-                      Operations & Delivery Hub
+                      Headquarters & Operations Hub
                     </span>
                     <span className="text-base font-bold text-[#093965] block">
-                      Ajmer, Rajasthan, India
+                      Dubai, United Arab Emirates (UAE)
                     </span>
                     <p className="text-xs text-slate-500 mt-0.5">
                       Workforce coordination, QA supervision, and process execution center
@@ -131,10 +131,10 @@ export default function Contact(): React.JSX.Element {
                       Client Service Markets
                     </span>
                     <span className="text-base font-bold text-[#093965] block">
-                      USA & Canada
+                      UAE, USA & Canada
                     </span>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Synchronized remote support across North American business hours
+                      Synchronized remote support across North American & Middle Eastern business hours
                     </p>
                   </div>
                 </div>

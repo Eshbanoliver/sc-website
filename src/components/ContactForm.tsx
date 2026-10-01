@@ -217,6 +217,7 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm bg-white focus:outline-none focus:border-[#2E8D9F] focus:ring-2 focus:ring-[#2E8D9F]/20"
           >
+            <option value="United Arab Emirates">United Arab Emirates (UAE)</option>
             <option value="USA">United States (USA)</option>
             <option value="Canada">Canada</option>
             <option value="India">India</option>

@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
     overview: "Modern business leaders and growing teams spend excessive hours trapped in repetitive organizational routines. Staff Clicks provides skilled Virtual Assistants who integrate seamlessly into your preferred communication channels (Slack, Teams, Google Workspace, Microsoft 365) and handle day-to-day operational details so you can focus on core strategy and client delivery.",
     benefits: [
       { title: "Time Freedom", desc: "Reclaim up to 15+ hours weekly from scheduling, email backlog, and administrative follow-ups." },
-      { title: "Aligned Time Zones", desc: "Support scheduled to match your working hours across India, USA, or Canada." },
+      { title: "Aligned Time Zones", desc: "Support scheduled to match your working hours across the UAE, USA, or Canada." },
       { title: "Flexible Engagement", desc: "Scale assistance up or down depending on project demands without long-term hiring lock-ins." },
       { title: "Structured Handover", desc: "Clear onboarding protocols ensure tasks are picked up with minimal ramp-up time." }
     ],
@@ -84,7 +84,7 @@ export const SERVICES: Service[] = [
     overview: "Customer loyalty hinges on swift, empathetic, and accurate responses. Staff Clicks provides dedicated customer support associates who master your brand voice, handle tier-1 and tier-2 inquiries, and resolve tickets methodically according to your defined SLAs.",
     benefits: [
       { title: "Higher First-Contact Resolution", desc: "Trained associates equipped with comprehensive knowledge bases resolve queries quickly." },
-      { title: "Extended Coverage", desc: "Maintain responsive support across North American and Indian business hours." },
+      { title: "Extended Coverage", desc: "Maintain responsive support across North American and UAE / Middle Eastern business hours." },
       { title: "Reduced Backlog", desc: "Clear ticket queues and prevent customer dissatisfaction during peak periods." },
       { title: "SLA Adherence", desc: "Measurable metrics for response times, resolution rates, and CSAT scores." }
     ],

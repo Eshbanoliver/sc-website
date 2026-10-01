@@ -62,7 +62,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Staff Clicks is a modern Virtual Assistance & Business Process Outsourcing company helping businesses across India, USA, and Canada streamline everyday operations with reliable, skilled remote professionals.
+              Staff Clicks is a modern Virtual Assistance & Business Process Outsourcing company helping businesses across UAE, USA, and Canada streamline everyday operations with reliable, skilled remote professionals.
             </p>
 
             <div className="pt-2 text-xs text-slate-300 space-y-1.5">
@@ -158,7 +158,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   <MapPin className="w-3.5 h-3.5 text-[#FA7D3C]" />
                   <span>Operations Hub:</span>
                 </div>
-                <p className="text-slate-300 mt-0.5">Ajmer, Rajasthan, India</p>
+                <p className="text-slate-300 mt-0.5">Dubai, United Arab Emirates (UAE)</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white/[0.06] border border-white/10">

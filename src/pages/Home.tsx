@@ -149,9 +149,9 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               <div className="inline-flex flex-wrap items-center gap-2 p-1.5 px-3.5 rounded-full bg-white border border-slate-200/90 shadow-xs text-xs font-semibold text-slate-700">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-[#093965] font-extrabold">Serving Businesses In:</span>
+                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">UAE</span>
                 <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">USA</span>
                 <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">Canada</span>
-                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">India</span>
               </div>
 
               {/* Main Headline */}
@@ -245,8 +245,8 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                     </div>
                     <div className="grid grid-cols-3 gap-2 text-center pt-2">
                       <div className="p-2 rounded-xl bg-slate-900/60 border border-slate-700/50">
-                        <div className="text-xs font-bold text-white">India</div>
-                        <div className="text-[10px] text-slate-400">Ajmer Hub</div>
+                        <div className="text-xs font-bold text-white">UAE</div>
+                        <div className="text-[10px] text-slate-400">Dubai Hub</div>
                       </div>
                       <div className="p-2 rounded-xl bg-slate-900/60 border border-[#2E8D9F]/60">
                         <div className="text-xs font-bold text-[#3cb4cb]">USA</div>
@@ -370,7 +370,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                   <div className="pt-4 border-t border-white/20 space-y-3">
                     <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-100">
                       <CheckCircle2 className="w-4 h-4 text-[#FA7D3C] shrink-0" />
-                      <span>Delivery oversight from Ajmer, Rajasthan operations hub</span>
+                      <span>Delivery oversight from Dubai, UAE operations hub</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-100">
                       <CheckCircle2 className="w-4 h-4 text-[#FA7D3C] shrink-0" />
@@ -693,7 +693,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
         <SectionHeader
           badge="Cross-Border Delivery"
           title="Supporting Businesses Across Borders"
-          subtitle="Whether you are building a support team in India or looking for dependable operational assistance for your business in the USA or Canada, Staff Clicks is built to support distributed business operations."
+          subtitle="Whether you are building a support team in the UAE or looking for dependable operational assistance for your business in the USA or Canada, Staff Clicks is built to support distributed business operations."
         />
 
         <div className="mt-12">
@@ -714,7 +714,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
           </h3>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            At Staff Clicks, we believe in honest partnerships without inflated metrics or fabricated claims. We measure our success through SLA compliance, daily task visibility, rigorous NDA protections, and consistent communication with every client across India, USA, and Canada.
+            At Staff Clicks, we believe in honest partnerships without inflated metrics or fabricated claims. We measure our success through SLA compliance, daily task visibility, rigorous NDA protections, and consistent communication with every client across UAE, USA, and Canada.
           </p>
 
           <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
@@ -800,7 +800,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
             </div>
 
             <p className="text-xs text-slate-300 pt-2">
-              Serving businesses across India, USA, and Canada. Rapid onboarding with no hidden platform fees.
+              Serving businesses across UAE, USA, and Canada. Rapid onboarding with no hidden platform fees.
             </p>
           </div>
         </div>

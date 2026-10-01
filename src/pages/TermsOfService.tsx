@@ -51,7 +51,7 @@ export default function TermsOfService(): React.JSX.Element {
 
         <h3 className="text-lg font-bold text-[#093965] pt-2">5. Governing Law</h3>
         <p>
-          These terms and agreements shall be governed by and construed in accordance with the applicable laws of India, with primary operations situated in Ajmer, Rajasthan, while honoring contractual commitments entered into with international enterprise clients in the USA and Canada.
+          These terms and agreements shall be governed by and construed in accordance with the applicable laws of the United Arab Emirates, with primary operations situated in Dubai, UAE, while honoring contractual commitments entered into with international enterprise clients in the USA, Canada, and globally.
         </p>
 
         <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1">

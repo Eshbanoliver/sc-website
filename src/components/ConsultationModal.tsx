@@ -49,7 +49,7 @@ export default function ConsultationModal({ isOpen, onClose, prefilledService = 
             Build Your Dedicated Remote Team
           </h2>
           <p className="mt-1 text-slate-200 text-xs sm:text-sm">
-            Discuss your requirements with our staffing advisors. Serving India, USA & Canada.
+            Discuss your requirements with our staffing advisors. Serving UAE, USA & Canada.
           </p>
         </div>
 

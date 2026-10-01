@@ -95,7 +95,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
               <span className="hidden xs:inline">Support:</span>
             </span>
             <span className="text-slate-300 shrink-0">
-              <strong className="text-white">India</strong> (Ajmer)
+              <strong className="text-white">UAE</strong> (Dubai)
             </span>
             <span className="text-slate-500">•</span>
             <span className="text-slate-300 shrink-0">

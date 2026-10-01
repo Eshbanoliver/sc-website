@@ -26,7 +26,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
     {
       icon: Clock,
       title: "Time-Zone Synchronization",
-      desc: "Our remote professionals align with client working hours across EST, CST, PST, and IST, facilitating live collaboration and instantaneous turnarounds."
+      desc: "Our remote professionals align with client working hours across EST, CST, PST, and GST, facilitating live collaboration and instantaneous turnarounds."
     },
     {
       icon: Users,
@@ -44,7 +44,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
     "Strict Non-Disclosure Agreements (NDAs) protecting all client proprietary information",
     "Direct integration into your existing communication stack (Slack, Teams, Email, Zoom)",
     "No lock-in contracts: scale support hours up or down based on genuine workflow needs",
-    "Continuous skill enhancement and workflow audits supervised from our Ajmer delivery hub",
+    "Continuous skill enhancement and workflow audits supervised from our Dubai delivery hub",
     "Transparent end-of-day reporting with itemized task time allocations"
   ];
 
@@ -63,7 +63,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Staff Clicks is a specialized Virtual Assistance & Business Process Outsourcing company dedicated to helping growing companies across India, the USA, and Canada scale efficiently with reliable remote staffing.
+            Staff Clicks is a specialized Virtual Assistance & Business Process Outsourcing company dedicated to helping growing companies across the UAE, USA, and Canada scale efficiently with reliable remote staffing.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
             </div>
             <h2 className="text-2xl font-extrabold text-[#093965]">Our Vision</h2>
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-              To be the most dependable and transparent remote workforce partner for enterprises across North America and India, known for operational precision, ethical client relationships, and flexible staffing that truly adapts to each business’s unique rhythm.
+              To be the most dependable and transparent remote workforce partner for enterprises across North America and the UAE / Middle East, known for operational precision, ethical client relationships, and flexible staffing that truly adapts to each business’s unique rhythm.
             </p>
           </div>
         </div>
@@ -140,10 +140,10 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                 Delivery Center Overview
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
-                Grounded in Ajmer, Connected Globally
+                Grounded in Dubai, Connected Globally
               </h2>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Headquartered with our primary operations center in <strong>Ajmer, Rajasthan, India</strong>, Staff Clicks combines rich regional talent with international management standards. We support clients located across <strong>USA, Canada, and India</strong>, enabling businesses to leverage high-caliber staffing without geographic boundaries.
+                Headquartered with our primary operations center in <strong>Dubai, United Arab Emirates (UAE)</strong>, Staff Clicks combines rich regional talent with international management standards. We support clients located across <strong>UAE, USA, and Canada</strong>, enabling businesses to leverage high-caliber staffing without geographic boundaries.
               </p>
 
               <div className="space-y-3 pt-2">
@@ -165,12 +165,12 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                 <div className="space-y-3 text-sm">
                   <div className="pb-3 border-b border-slate-700">
                     <span className="text-slate-400 block text-xs">Primary Operations Hub:</span>
-                    <span className="font-semibold text-white">Ajmer, Rajasthan, India</span>
+                    <span className="font-semibold text-white">Dubai, United Arab Emirates (UAE)</span>
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">
                     <span className="text-slate-400 block text-xs">Primary Markets Served:</span>
-                    <span className="font-semibold text-white">USA, Canada & India</span>
+                    <span className="font-semibold text-white">UAE, USA & Canada</span>
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">

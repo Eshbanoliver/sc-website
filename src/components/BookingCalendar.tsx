@@ -66,7 +66,7 @@ export default function BookingCalendar(): React.JSX.Element {
   const [selectedDate, setSelectedDate] = useState<Date>(initialDate);
   const [selectedSlot, setSelectedSlot] = useState<string>("03:30 PM");
   const [selectedSession, setSelectedSession] = useState<string>("consultation");
-  const [selectedTimezone, setSelectedTimezone] = useState<"IST" | "EST" | "PST">("IST");
+  const [selectedTimezone, setSelectedTimezone] = useState<"GST" | "EST" | "PST">("GST");
   const [fullName, setFullName] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
   const [serviceNeeded, setServiceNeeded] = useState<string>("Virtual Assistance & Admin");
@@ -344,12 +344,12 @@ export default function BookingCalendar(): React.JSX.Element {
                   <Globe2 className="w-3 h-3 text-[#2E8D9F]" />
                   <button
                     type="button"
-                    onClick={() => setSelectedTimezone("IST")}
+                    onClick={() => setSelectedTimezone("GST")}
                     className={`px-1.5 py-0.5 rounded cursor-pointer ${
-                      selectedTimezone === "IST" ? "bg-[#093965] text-white" : "hover:text-[#093965]"
+                      selectedTimezone === "GST" ? "bg-[#093965] text-white" : "hover:text-[#093965]"
                     }`}
                   >
-                    IST
+                    GST
                   </button>
                   <button
                     type="button"

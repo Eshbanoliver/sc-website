@@ -89,7 +89,7 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
                 <div className="space-y-3 text-xs sm:text-sm">
                   <div className="pb-3 border-b border-slate-700/80">
                     <span className="text-slate-400 block text-xs">Coverage Timezones:</span>
-                    <span className="font-semibold text-white">EST / CST / PST / IST Aligned</span>
+                    <span className="font-semibold text-white">EST / CST / PST / GST Aligned</span>
                   </div>
                   <div className="pb-3 border-b border-slate-700/80">
                     <span className="text-slate-400 block text-xs">Onboarding Speed:</span>
@@ -101,7 +101,7 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
                   </div>
                   <div>
                     <span className="text-slate-400 block text-xs">Primary Markets:</span>
-                    <span className="font-semibold text-white">USA, Canada & India</span>
+                    <span className="font-semibold text-white">UAE, USA & Canada</span>
                   </div>
                 </div>
 

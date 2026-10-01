@@ -44,7 +44,7 @@ export default function GlobalMapGraphic(): React.JSX.Element {
               <path d="M180 200 Q 280 160 380 220 T 520 240 T 680 190 T 820 220" stroke="#2E8D9F" strokeWidth="0.8" strokeDasharray="3 3" />
               <path d="M220 260 Q 340 220 460 270 T 620 280 T 750 250" stroke="#2E8D9F" strokeWidth="1" strokeDasharray="5 5" />
               
-              {/* Arched connecting vectors between North America & India */}
+              {/* Arched connecting vectors between North America & Dubai (UAE) */}
               <path 
                 d="M 270 140 Q 480 40 710 210" 
                 stroke="url(#gradientVector)" 
@@ -76,7 +76,7 @@ export default function GlobalMapGraphic(): React.JSX.Element {
               <circle cx="260" cy="150" r="7" fill="#FA7D3C" />
               <circle cx="260" cy="150" r="16" stroke="#FA7D3C" strokeWidth="1.5" opacity="0.5" className="animate-ping" />
 
-              {/* India (Ajmer Hub) Node */}
+              {/* UAE (Dubai Hub) Node */}
               <circle cx="710" cy="210" r="8" fill="#3cb4cb" />
               <circle cx="710" cy="210" r="20" stroke="#3cb4cb" strokeWidth="2" opacity="0.7" className="animate-ping" />
             </svg>
@@ -94,29 +94,29 @@ export default function GlobalMapGraphic(): React.JSX.Element {
 
             <div className="absolute bottom-6 right-2 sm:right-20 bg-[#062644]/90 border border-[#2E8D9F]/60 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold text-[#3cb4cb] shadow-lg flex items-center gap-1.5 sm:gap-2">
               <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#3cb4cb]"></span>
-              <span>India (Ajmer Hub)</span>
+              <span>UAE (Dubai Hub)</span>
             </div>
           </div>
         </div>
 
         {/* 3 Location Pills / Sleek Metric Badges */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {/* India Pill */}
+          {/* UAE Pill */}
           <div className="p-5 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-[#2E8D9F]/60 transition-all duration-300 backdrop-blur-md">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
-                <span className="text-xl">🇮🇳</span>
-                <span className="text-lg font-black text-white">India</span>
+                <span className="text-xl">🇦🇪</span>
+                <span className="text-lg font-black text-white">UAE</span>
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#2E8D9F]/25 text-[#3cb4cb] border border-[#2E8D9F]/40">
                 Operations Hub
               </span>
             </div>
             <div className="text-xs font-bold text-slate-200">
-              Ajmer, Rajasthan, India
+              Dubai, United Arab Emirates
             </div>
             <p className="mt-2 text-xs text-slate-400 leading-relaxed">
-              Workforce delivery center orchestrating training, standard operating procedures, and cross-border execution.
+              Workforce headquarters and delivery center orchestrating training, standard operating procedures, and cross-border execution.
             </p>
           </div>
 
