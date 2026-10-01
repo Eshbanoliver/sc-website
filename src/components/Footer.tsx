@@ -189,20 +189,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            ©️ Copyright 2026 |{" "}
-            <Link to="/" className="text-white font-bold hover:text-[#FA7D3C] hover:underline transition-colors">
-              Staff Clicks
-            </Link>{" "}
-            | All Rights Reserved | Powered by{" "}
-            <a
-              href="https://www.futurexdigitalmarketing.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#28a745" }}
-              className="hover:underline font-semibold"
-            >
-              FutureX Digital Marketing
-            </a>
+            © {new Date().getFullYear()} <strong className="text-white font-semibold">Staff Clicks</strong>. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">
