@@ -149,9 +149,12 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               <div className="inline-flex flex-wrap items-center gap-2 p-1.5 px-3.5 rounded-full bg-white border border-slate-200/90 shadow-xs text-xs font-semibold text-slate-700">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-[#093965] font-extrabold">Serving Businesses In:</span>
-                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">UAE</span>
+                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">Ajmer</span>
                 <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">USA</span>
                 <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">Canada</span>
+                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">Singapore</span>
+                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">Australia</span>
+                <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-bold">United Kingdom</span>
               </div>
 
               {/* Main Headline */}
