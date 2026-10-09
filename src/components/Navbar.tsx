@@ -95,7 +95,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
               <span className="hidden xs:inline">Support:</span>
             </span>
             <span className="text-slate-300 shrink-0">
-              <strong className="text-white">UAE</strong> (Dubai)
+              <strong className="text-white">Ajmer</strong>
             </span>
             <span className="text-slate-500">•</span>
             <span className="text-slate-300 shrink-0">
@@ -104,6 +104,18 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
             <span className="text-slate-500">•</span>
             <span className="text-slate-300 shrink-0">
               <strong className="text-white">Canada</strong>
+            </span>
+            <span className="text-slate-500">•</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">Singapore</strong>
+            </span>
+            <span className="text-slate-500">•</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">Australia</strong>
+            </span>
+            <span className="text-slate-500">•</span>
+            <span className="text-slate-300 shrink-0">
+              <strong className="text-white">United Kingdom</strong>
             </span>
           </div>
 
