@@ -26,7 +26,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
     {
       icon: Clock,
       title: "Time-Zone Synchronization",
-      desc: "Our remote professionals align with client working hours across EST, CST, PST, and GST, facilitating live collaboration and instantaneous turnarounds."
+      desc: "Our remote professionals align with client working hours across all timezones (EST, CST, PST, GMT, SGT, AEST, and IST), facilitating live collaboration and instantaneous turnarounds."
     },
     {
       icon: Users,

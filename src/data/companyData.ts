@@ -5,7 +5,7 @@ export const COMPANY_INFO: CompanyInfo = {
   tagline: "Your Trusted Workforce for Smarter Business Operations",
   phone: "+91 83026 48461",
   email: "contact@staffclicks.com",
-  operatingHours: "Monday – Saturday: 9:00 AM – 7:00 PM GST / EST & PST Support Available",
+  operatingHours: "Monday – Saturday: 24/6 Coverage Aligned to All Timezones (EST, CST, PST, GMT, SGT, AEST & IST)",
   markets: [
     { name: "Ajmer", hub: "Ajmer, India", note: "Delivery Center & Operations Hub" },
     { name: "USA", hub: "United States", note: "Serving B2B Clients Nationwide" },

@@ -66,7 +66,7 @@ export default function BookingCalendar(): React.JSX.Element {
   const [selectedDate, setSelectedDate] = useState<Date>(initialDate);
   const [selectedSlot, setSelectedSlot] = useState<string>("03:30 PM");
   const [selectedSession, setSelectedSession] = useState<string>("consultation");
-  const [selectedTimezone, setSelectedTimezone] = useState<"GST" | "EST" | "PST">("GST");
+  const [selectedTimezone, setSelectedTimezone] = useState<"EST" | "CST" | "PST" | "GMT" | "SGT" | "AEST" | "IST">("EST");
   const [fullName, setFullName] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
   const [serviceNeeded, setServiceNeeded] = useState<string>("Virtual Assistance & Admin");
@@ -340,35 +340,20 @@ export default function BookingCalendar(): React.JSX.Element {
                 </label>
 
                 {/* Timezone Switcher */}
-                <div className="inline-flex items-center gap-1 p-1 bg-white rounded-lg border border-slate-200 text-[11px] font-bold text-slate-600">
-                  <Globe2 className="w-3 h-3 text-[#2E8D9F]" />
-                  <button
-                    type="button"
-                    onClick={() => setSelectedTimezone("GST")}
-                    className={`px-1.5 py-0.5 rounded cursor-pointer ${
-                      selectedTimezone === "GST" ? "bg-[#093965] text-white" : "hover:text-[#093965]"
-                    }`}
-                  >
-                    GST
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedTimezone("EST")}
-                    className={`px-1.5 py-0.5 rounded cursor-pointer ${
-                      selectedTimezone === "EST" ? "bg-[#093965] text-white" : "hover:text-[#093965]"
-                    }`}
-                  >
-                    EST
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedTimezone("PST")}
-                    className={`px-1.5 py-0.5 rounded cursor-pointer ${
-                      selectedTimezone === "PST" ? "bg-[#093965] text-white" : "hover:text-[#093965]"
-                    }`}
-                  >
-                    PST
-                  </button>
+                <div className="flex flex-wrap items-center gap-1 p-1 bg-white rounded-lg border border-slate-200 text-[11px] font-bold text-slate-600">
+                  <Globe2 className="w-3 h-3 text-[#2E8D9F] ml-0.5" />
+                  {(["EST", "CST", "PST", "GMT", "SGT", "AEST", "IST"] as const).map((tz) => (
+                    <button
+                      key={tz}
+                      type="button"
+                      onClick={() => setSelectedTimezone(tz)}
+                      className={`px-1.5 py-0.5 rounded cursor-pointer transition-colors ${
+                        selectedTimezone === tz ? "bg-[#093965] text-white" : "hover:text-[#093965]"
+                      }`}
+                    >
+                      {tz}
+                    </button>
+                  ))}
                 </div>
               </div>
 

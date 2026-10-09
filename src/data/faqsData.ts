@@ -8,8 +8,8 @@ export const FAQS: FAQItem[] = [
   },
   {
     category: "Coverage & Delivery",
-    question: "Can Staff Clicks support businesses outside the UAE?",
-    answer: "Yes, absolutely. Staff Clicks is specifically built to serve businesses across the UAE, the United States, and Canada. Our remote professionals align their daily schedules to your local business hours (EST, CST, PST, or GST) so you experience seamless real-time collaboration."
+    question: "Which countries and timezones does Staff Clicks support?",
+    answer: "Staff Clicks is built to serve businesses across Ajmer (India), the United States, Canada, Singapore, Australia, and the United Kingdom. Our remote professionals align their daily schedules to your local business hours across all timezones (EST, CST, PST, GMT, SGT, AEST, and IST) so you experience seamless real-time collaboration."
   },
   {
     category: "Flexibility & Engagement",
