@@ -4,6 +4,7 @@ import { PhoneCall } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import ServiceCard from "../components/ServiceCard";
 import FAQAccordion from "../components/FAQAccordion";
+import VAProfiles from "../components/VAProfiles";
 import { SERVICES } from "../data/servicesData";
 
 interface ServicesProps {
@@ -120,30 +121,9 @@ export default function Services({ onOpenConsultation }: ServicesProps): React.J
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 text-center space-y-6 shadow-sm">
-          <h2 className="text-3xl font-extrabold text-[#093965]">
-            Start Delegating with Confidence
-          </h2>
-          <p className="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
-            Reach out today to discuss your operational pain points. We'll identify the right virtual staffing approach for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <button
-              onClick={onOpenConsultation}
-              className="px-8 py-3.5 rounded-xl bg-[#FA7D3C] hover:bg-[#e66b2a] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
-            >
-              Get a Free Consultation
-            </button>
-            <Link
-              to="/contact"
-              className="px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#093965] font-bold text-sm transition-all"
-            >
-              Contact Us Directly
-            </Link>
-          </div>
-        </div>
+      {/* VIRTUAL ASSISTANT PROFILES */}
+      <section id="va-profiles" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <VAProfiles onOpenConsultation={onOpenConsultation} />
       </section>
     </div>
   );
