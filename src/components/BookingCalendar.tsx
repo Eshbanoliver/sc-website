@@ -138,30 +138,12 @@ export default function BookingCalendar(): React.JSX.Element {
     year: "numeric"
   });
 
-  // Build WhatsApp URL
-  const handleBookOnWhatsApp = (e: React.FormEvent) => {
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+
+  // Form submission handler
+  const handleBookMeeting = (e: React.FormEvent) => {
     e.preventDefault();
-
-    const phoneNumber = "918302648461";
-    const sessionTitle = activeSessionData.title;
-    const sessionDuration = activeSessionData.duration;
-
-    const messageLines = [
-      `📅 *Meeting Session Booking Request - Staff Clicks*`,
-      ``,
-      `Hello Staff Clicks team, I would like to schedule a session:`,
-      `• *Date:* ${formattedSelectedDate}`,
-      `• *Preferred Time:* ${selectedSlot} (${selectedTimezone})`,
-      `• *Session Type:* ${sessionTitle} (${sessionDuration})`,
-      `• *Service Interest:* ${serviceNeeded}`,
-      fullName.trim() ? `• *Name:* ${fullName.trim()}` : null,
-      companyName.trim() ? `• *Company:* ${companyName.trim()}` : null,
-      ``,
-      `Please confirm if this schedule works for your advisory team. Thank you!`
-    ].filter(Boolean).join("\n");
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageLines)}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    setIsSubmitted(true);
   };
 
   return (
@@ -181,7 +163,7 @@ export default function BookingCalendar(): React.JSX.Element {
             Book a One-on-One Discovery Call or Meeting
           </h2>
           <p className="mt-2 text-xs sm:text-base text-slate-600 leading-relaxed">
-            Pick your preferred date and time slot from our operational calendar below. Once selected, you'll be instantly redirected to WhatsApp with your reservation details pre-filled.
+            Pick your preferred date and time slot from our operational calendar below to request a personalized discovery session.
           </p>
         </div>
 
@@ -385,77 +367,97 @@ export default function BookingCalendar(): React.JSX.Element {
             </div>
 
             {/* Optional Quick Info */}
-            <form onSubmit={handleBookOnWhatsApp} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200 space-y-4">
-              <label className="block text-xs font-black uppercase tracking-wider text-slate-700">
-                4. Your Details (Optional)
-              </label>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <input
-                    type="text"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    placeholder="Your Name (e.g. Sarah Smith)"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
-                  />
+            {isSubmitted ? (
+              <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-4">
+                <div className="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-md">
+                  <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <input
-                    type="text"
-                    value={companyName}
-                    onChange={(e) => setCompanyName(e.target.value)}
-                    placeholder="Company (Optional)"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
-                  />
+                  <h3 className="text-lg sm:text-xl font-bold text-emerald-950">
+                    Meeting Request Received!
+                  </h3>
+                  <p className="text-xs sm:text-sm text-emerald-800 mt-2 leading-relaxed max-w-md mx-auto">
+                    Thank you{fullName ? `, ${fullName}` : ""}. We have scheduled your <strong>{activeSessionData.title}</strong> for <strong>{formattedSelectedDate}</strong> at <strong>{selectedSlot} ({selectedTimezone})</strong>. Our team will contact you with the meeting link.
+                  </p>
                 </div>
-              </div>
-
-              <div>
-                <select
-                  value={serviceNeeded}
-                  onChange={(e) => setServiceNeeded(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                <button
+                  type="button"
+                  onClick={() => setIsSubmitted(false)}
+                  className="px-5 py-2.5 rounded-xl bg-white border border-emerald-300 text-emerald-900 font-bold text-xs hover:bg-emerald-100 transition-colors cursor-pointer shadow-sm"
                 >
-                  <option value="Virtual Assistance & Admin">Virtual Assistance & Executive Admin</option>
-                  <option value="Customer Support & Helpdesk">Customer Support & Helpdesk</option>
-                  <option value="Cold Calling & Lead Gen">Cold Calling & Lead Generation</option>
-                  <option value="Data Entry & CRM Support">Data Entry & CRM Operations</option>
-                  <option value="Bookkeeping & Financial Support">Bookkeeping & Financial Administration</option>
-                  <option value="Multi-Process Operations">Comprehensive Multi-Process Outsourcing</option>
-                </select>
+                  Schedule Another Slot
+                </button>
               </div>
+            ) : (
+              <form onSubmit={handleBookMeeting} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200 space-y-4">
+                <label className="block text-xs font-black uppercase tracking-wider text-slate-700">
+                  4. Your Details (Optional)
+                </label>
 
-              {/* Live Booking Summary Card */}
-              <div className="p-4 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs space-y-1.5">
-                <div className="flex items-center gap-1.5 font-bold text-emerald-900">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Selected Session Overview:</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <input
+                      type="text"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      placeholder="Your Name (e.g. Sarah Smith)"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      value={companyName}
+                      onChange={(e) => setCompanyName(e.target.value)}
+                      placeholder="Company (Optional)"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                    />
+                  </div>
                 </div>
-                <div className="text-emerald-800 pl-5 space-y-0.5">
-                  <p><strong>Date:</strong> {formattedSelectedDate}</p>
-                  <p><strong>Time:</strong> {selectedSlot} ({selectedTimezone})</p>
-                  <p><strong>Session:</strong> {activeSessionData.title} ({activeSessionData.duration})</p>
+
+                <div>
+                  <select
+                    value={serviceNeeded}
+                    onChange={(e) => setServiceNeeded(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                  >
+                    <option value="Virtual Assistance & Admin">Virtual Assistance & Executive Admin</option>
+                    <option value="Customer Support & Helpdesk">Customer Support & Helpdesk</option>
+                    <option value="Cold Calling & Lead Gen">Cold Calling & Lead Generation</option>
+                    <option value="Data Entry & CRM Support">Data Entry & CRM Operations</option>
+                    <option value="Bookkeeping & Financial Support">Bookkeeping & Financial Administration</option>
+                    <option value="Multi-Process Operations">Comprehensive Multi-Process Outsourcing</option>
+                  </select>
                 </div>
-              </div>
 
-              {/* Action Button: Book via WhatsApp */}
-              <button
-                type="submit"
-                className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#25D366] to-[#1ebe5d] hover:from-[#20bd5a] hover:to-[#17a04d] text-white font-extrabold text-sm sm:text-base shadow-[0_10px_25px_rgba(37,211,102,0.35)] hover:shadow-[0_14px_30px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-3 cursor-pointer"
-              >
-                {/* WhatsApp Icon */}
-                <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M12.031 2C6.518 2 2.03 6.47 2.03 11.979c0 1.933.553 3.738 1.517 5.267L2 22l4.908-1.509a9.92 9.92 0 0 0 5.123 1.468h.004c5.512 0 9.996-4.47 9.996-9.979 0-2.665-1.042-5.17-2.932-7.056C17.209 3.04 14.697 2 12.031 2zm0 18.27h-.003a8.27 8.27 0 0 1-4.22-1.157l-.303-.18-3.13.963.98-3.045-.198-.314a8.272 8.272 0 0 1-1.353-4.553c0-4.57 3.725-8.286 8.243-8.286 2.204 0 4.275.858 5.834 2.414a8.217 8.217 0 0 1 2.417 5.827c0 4.57-3.725 8.286-8.242 8.286zm4.518-6.195c-.248-.124-1.468-.724-1.696-.807-.228-.083-.394-.124-.56.124-.166.248-.642.807-.787.973-.145.166-.29.186-.538.062-.248-.124-1.048-.386-1.996-1.23-.738-.658-1.236-1.472-1.381-1.72-.145-.248-.016-.382.108-.506.112-.112.248-.29.373-.435.124-.145.166-.248.248-.414.083-.166.041-.311-.02-.435-.062-.124-.56-1.348-.767-1.846-.202-.486-.407-.42-.56-.428l-.477-.008c-.166 0-.435.062-.663.311-.228.248-.87 85-.87 2.073 0 1.223.891 2.404 1.015 2.57.124.166 1.752 2.673 4.244 3.748.593.256 1.056.409 1.418.524.596.19 1.138.163 1.566.099.478-.071 1.468-.6 1.675-1.18.207-.58.207-1.077.145-1.18-.062-.104-.228-.166-.476-.29z" />
-                </svg>
-                <span>Confirm & Book on WhatsApp</span>
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
+                {/* Live Booking Summary Card */}
+                <div className="p-4 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs space-y-1.5">
+                  <div className="flex items-center gap-1.5 font-bold text-emerald-900">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Selected Session Overview:</span>
+                  </div>
+                  <div className="text-emerald-800 pl-5 space-y-0.5">
+                    <p><strong>Date:</strong> {formattedSelectedDate}</p>
+                    <p><strong>Time:</strong> {selectedSlot} ({selectedTimezone})</p>
+                    <p><strong>Session:</strong> {activeSessionData.title} ({activeSessionData.duration})</p>
+                  </div>
+                </div>
 
-              <p className="text-center text-[11px] text-slate-400">
-                Direct connection to Staff Clicks operations coordinator via official WhatsApp line (+91 83026 48461). No credit card required.
-              </p>
-            </form>
+                {/* Action Button: Book Meeting */}
+                <button
+                  type="submit"
+                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#093965] to-[#2E8D9F] hover:opacity-95 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-3 cursor-pointer"
+                >
+                  <CalendarIcon className="w-5 h-5 text-[#FA7D3C]" />
+                  <span>Confirm & Request Schedule</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </button>
+
+                <p className="text-center text-[11px] text-slate-400">
+                  Direct coordination with Staff Clicks advisory team. No credit card required.
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { X, PhoneCall } from "lucide-react";
+import { X, Mail } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 interface ConsultationModalProps {
@@ -49,20 +49,20 @@ export default function ConsultationModal({ isOpen, onClose, prefilledService = 
             Build Your Dedicated Remote Team
           </h2>
           <p className="mt-1 text-slate-200 text-xs sm:text-sm">
-            Discuss your requirements with our staffing advisors. Serving UAE, USA & Canada.
+            Discuss your requirements with our staffing advisors. Serving Ajmer, USA, Canada, Singapore, Australia & UK.
           </p>
         </div>
 
         {/* Content */}
         <div className="p-4 sm:p-8 max-h-[78dvh] overflow-y-auto">
           <div className="mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm">
-            <span className="text-slate-600">Prefer speaking directly right now?</span>
+            <span className="text-slate-600">Prefer direct email correspondence?</span>
             <a
-              href="tel:+918302648461"
+              href="mailto:contact@staffclicks.com"
               className="inline-flex items-center gap-1.5 font-bold text-[#093965] hover:text-[#FA7D3C] transition-colors"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-[#FA7D3C]" />
-              <span>+91 83026 48461</span>
+              <Mail className="w-3.5 h-3.5 text-[#FA7D3C]" />
+              <span>contact@staffclicks.com</span>
             </a>
           </div>
 

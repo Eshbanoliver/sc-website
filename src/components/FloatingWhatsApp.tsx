@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-export default function FloatingWhatsApp(): React.JSX.Element {
+export default function FloatingWhatsApp(): React.JSX.Element | null {
+  // Hidden for now, ready to re-enable when WhatsApp channel launches
+  const isEnabled = false;
+  if (!isEnabled) return null;
+
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const phoneNumber = "918302648461";
   const defaultMessage = "Hi Staff Clicks, I would like to know more about your virtual assistance and business support services.";

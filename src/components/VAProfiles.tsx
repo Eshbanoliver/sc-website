@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UserCheck, Star, Clock, Sparkles, CheckCircle2, Zap, ArrowRight, ShieldCheck, Globe } from "lucide-react";
+import { UserCheck, Star, Clock, Sparkles, CheckCircle2, Zap, ArrowRight, ShieldCheck, Globe, Mail } from "lucide-react";
 
 export interface VAProfile {
   id: string;
@@ -349,10 +349,11 @@ export default function VAProfiles({ onOpenConsultation }: VAProfilesProps): Rea
             <ArrowRight className="w-4 h-4" />
           </button>
           <a
-            href="tel:+918302648461"
-            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-all text-center"
+            href="mailto:contact@staffclicks.com"
+            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-all text-center flex items-center justify-center gap-2"
           >
-            +91 83026 48461
+            <Mail className="w-4 h-4 text-[#FA7D3C]" />
+            <span>contact@staffclicks.com</span>
           </a>
         </div>
       </div>

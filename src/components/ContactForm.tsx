@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, PhoneCall, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Send, Mail, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 import { ContactFormData } from "../types";
 
@@ -75,11 +75,11 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
         </p>
         <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="tel:+918302648461"
+            href="mailto:contact@staffclicks.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#093965] text-white text-sm font-semibold hover:bg-[#062644] transition-colors"
           >
-            <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-            <span>Need immediate answers? Call +91 83026 48461</span>
+            <Mail className="w-4 h-4 text-[#FA7D3C]" />
+            <span>Direct Inquiries: contact@staffclicks.com</span>
           </a>
           <button
             onClick={() => {

@@ -5,6 +5,7 @@ import {
   CheckCircle2, 
   ChevronRight, 
   PhoneCall, 
+  Mail,
   Sparkles, 
   AlertTriangle
 } from "lucide-react";
@@ -69,11 +70,11 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
                 </button>
 
                 <a
-                  href="tel:+918302648461"
+                  href="mailto:contact@staffclicks.com"
                   className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#093965] font-bold text-sm border border-slate-300 transition-all flex items-center gap-2"
                 >
-                  <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                  <span>Call +91 83026 48461</span>
+                  <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                  <span>Email Inquiries</span>
                 </a>
               </div>
             </div>

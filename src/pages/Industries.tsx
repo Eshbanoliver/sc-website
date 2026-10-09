@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PhoneCall, CheckCircle2 } from "lucide-react";
+import { Mail, CheckCircle2 } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import IndustryCard from "../components/IndustryCard";
 import { INDUSTRIES } from "../data/industriesData";
@@ -113,11 +113,11 @@ export default function Industries({ onOpenConsultation }: IndustriesProps): Rea
                   </button>
 
                   <a
-                    href="tel:+918302648461"
+                    href="mailto:contact@staffclicks.com"
                     className="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-colors flex items-center justify-center gap-2"
                   >
-                    <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                    <span>Call +91 83026 48461</span>
+                    <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                    <span>Email: contact@staffclicks.com</span>
                   </a>
                 </div>
               </div>

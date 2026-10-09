@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   PhoneCall, 
+  Mail,
   CheckCircle2, 
   Users, 
   Clock, 
@@ -194,13 +195,13 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               {/* Direct phone quick contact */}
               <div className="pt-3 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-600">
                 <a
-                  href="tel:+918302648461"
+                  href="mailto:contact@staffclicks.com"
                   className="inline-flex items-center gap-2 font-bold text-[#093965] hover:text-[#FA7D3C] transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-[#093965]/10 flex items-center justify-center text-[#093965]">
-                    <PhoneCall className="w-3.5 h-3.5" />
+                    <Mail className="w-3.5 h-3.5 text-[#2E8D9F]" />
                   </div>
-                  <span>Direct Hotline: +91 83026 48461</span>
+                  <span>Inquiries: contact@staffclicks.com</span>
                 </a>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="text-slate-500 font-medium">Flexible Monthly & Custom Retention Plans</span>
@@ -527,7 +528,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
         </div>
       </section>
 
-      {/* INTERACTIVE CALENDAR BOOKING FOR WHATSAPP */}
+      {/* INTERACTIVE CALENDAR BOOKING */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <BookingCalendar />
       </section>
@@ -846,16 +847,16 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               </button>
 
               <a
-                href="tel:+918302648461"
+                href="mailto:contact@staffclicks.com"
                 className="w-full sm:w-auto px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all duration-200 flex items-center justify-center gap-2"
               >
-                <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                <span>Call +91 83026 48461</span>
+                <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                <span>contact@staffclicks.com</span>
               </a>
             </div>
 
             <p className="text-xs text-slate-300 pt-2">
-              Serving businesses across UAE, USA, and Canada. Rapid onboarding with no hidden platform fees.
+              Serving businesses across Ajmer, USA, Canada, Singapore, Australia & UK. Rapid onboarding with no hidden platform fees.
             </p>
           </div>
         </div>

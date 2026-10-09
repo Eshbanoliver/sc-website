@@ -4,7 +4,7 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  PhoneCall, 
+  Mail,
   Sparkles, 
   ArrowRight,
   UserCheck, 
@@ -121,12 +121,12 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
 
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="tel:+918302648461"
+              href="mailto:contact@staffclicks.com"
               className="flex items-center gap-1.5 font-bold text-white hover:text-[#FA7D3C] transition-colors text-[11px] sm:text-xs whitespace-nowrap"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-[#FA7D3C]" />
-              <span className="hidden sm:inline">+91 83026 48461</span>
-              <span className="sm:hidden font-extrabold text-[#FA7D3C]">Call Us</span>
+              <Mail className="w-3.5 h-3.5 text-[#FA7D3C]" />
+              <span className="hidden sm:inline">contact@staffclicks.com</span>
+              <span className="sm:hidden font-extrabold text-[#FA7D3C]">Email Us</span>
             </a>
           </div>
         </div>
@@ -349,11 +349,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
 
             <div className="pt-3 border-t border-slate-100 space-y-2.5">
               <a
-                href="tel:+918302648461"
+                href="mailto:contact@staffclicks.com"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 text-sm font-bold text-[#093965] bg-slate-50/80 hover:bg-slate-100 transition-colors"
               >
-                <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                <span>Call +91 83026 48461</span>
+                <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                <span>contact@staffclicks.com</span>
               </a>
 
               <button

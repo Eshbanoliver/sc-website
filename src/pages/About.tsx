@@ -234,13 +234,8 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">
-                    <span className="text-slate-400 block text-xs">Direct Support Hotline:</span>
-                    <a
-                      href="tel:+918302648461"
-                      className="font-bold text-[#FA7D3C] hover:underline"
-                    >
-                      +91 83026 48461
-                    </a>
+                    <span className="text-slate-400 block text-xs">Direct Advisory Response:</span>
+                    <span className="font-bold text-[#FA7D3C]">Within 1 Business Day</span>
                   </div>
 
                   <div>

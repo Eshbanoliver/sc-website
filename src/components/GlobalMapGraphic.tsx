@@ -223,7 +223,7 @@ export default function GlobalMapGraphic(): React.JSX.Element {
             <span>Strict data security, NDA-protected environments, and transparent communication protocols.</span>
           </div>
           <div className="font-mono text-white/80 shrink-0">
-            Hotline: <strong className="text-white">+91 83026 48461</strong>
+            Inquiries: <strong className="text-white">contact@staffclicks.com</strong>
           </div>
         </div>
       </div>

@@ -63,7 +63,6 @@ export default function PrivacyPolicy(): React.JSX.Element {
         <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1">
           <div><strong>Staff Clicks</strong></div>
           <div>Headquarters & Operations Hub: Ajmer, Rajasthan, India</div>
-          <div>Phone: +91 83026 48461</div>
           <div>Email: contact@staffclicks.com</div>
         </div>
       </div>

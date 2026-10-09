@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { PhoneCall } from "lucide-react";
+import { Mail } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import ServiceCard from "../components/ServiceCard";
 import FAQAccordion from "../components/FAQAccordion";
@@ -97,11 +97,11 @@ export default function Services({ onOpenConsultation }: ServicesProps): React.J
                 Discuss a Custom Role
               </button>
               <a
-                href="tel:+918302648461"
+                href="mailto:contact@staffclicks.com"
                 className="w-full py-3.5 px-6 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all text-center flex items-center justify-center gap-2"
               >
-                <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                +91 83026 48461
+                <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                contact@staffclicks.com
               </a>
             </div>
           </div>

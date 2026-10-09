@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PhoneCall, MapPin, Globe, ArrowRight, ShieldCheck } from "lucide-react";
+import { PhoneCall, Mail, MapPin, Globe, ArrowRight, ShieldCheck } from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 
 interface FooterProps {
@@ -33,11 +33,11 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href="tel:+918302648461"
+              href="mailto:contact@staffclicks.com"
               className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-all flex items-center gap-2"
             >
-              <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-              +91 83026 48461
+              <Mail className="w-4 h-4 text-[#FA7D3C]" />
+              contact@staffclicks.com
             </a>
             <button
               onClick={onOpenConsultation}
@@ -212,11 +212,11 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   Direct Inquiries:
                 </span>
                 <a
-                  href="tel:+918302648461"
+                  href="mailto:contact@staffclicks.com"
                   className="text-white hover:text-[#FA7D3C] font-bold text-sm flex items-center gap-1.5 transition-colors"
                 >
-                  <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-                  +91 83026 48461
+                  <Mail className="w-4 h-4 text-[#FA7D3C]" />
+                  contact@staffclicks.com
                 </a>
               </div>
 

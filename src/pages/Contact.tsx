@@ -1,6 +1,5 @@
 import React from "react";
 import { 
-  PhoneCall, 
   Mail, 
   MapPin, 
   Globe2, 
@@ -34,10 +33,10 @@ export default function Contact(): React.JSX.Element {
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#book-meeting"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#093965] hover:bg-[#072d50] text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all"
             >
-              <CalendarDays className="w-4 h-4" />
-              <span>Book a Meeting on WhatsApp</span>
+              <CalendarDays className="w-4 h-4 text-[#FA7D3C]" />
+              <span>Schedule a Meeting</span>
             </a>
             <a
               href="#contact-form"
@@ -61,26 +60,6 @@ export default function Contact(): React.JSX.Element {
               </h2>
 
               <div className="space-y-4">
-                {/* Phone */}
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#093965]/10 text-[#093965] flex items-center justify-center shrink-0 mt-0.5">
-                    <PhoneCall className="w-5 h-5 text-[#FA7D3C]" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-                      Direct Hotline (International)
-                    </span>
-                    <a
-                      href="tel:+918302648461"
-                      className="text-base sm:text-lg font-bold text-[#093965] hover:text-[#FA7D3C] transition-colors"
-                    >
-                      +91 83026 48461
-                    </a>
-                    <p className="text-xs text-slate-500 mt-0.5">
-                      Available via voice calls and instant messaging
-                    </p>
-                  </div>
-                </div>
 
                 {/* Email */}
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
@@ -169,7 +148,7 @@ export default function Contact(): React.JSX.Element {
         </div>
       </section>
 
-      {/* INTERACTIVE CALENDAR BOOKING FOR WHATSAPP */}
+      {/* INTERACTIVE CALENDAR BOOKING */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
         <BookingCalendar />
       </section>

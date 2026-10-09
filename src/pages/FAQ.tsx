@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { 
   HelpCircle, 
   Search, 
-  PhoneCall
+  Mail
 } from "lucide-react";
 import FAQAccordion from "../components/FAQAccordion";
 import { FAQS } from "../data/faqsData";
@@ -105,11 +105,11 @@ export default function FAQ({ onOpenConsultation }: FAQProps): React.JSX.Element
               Ask an Advisor Directly
             </button>
             <a
-              href="tel:+918302648461"
+              href="mailto:contact@staffclicks.com"
               className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all flex items-center gap-2"
             >
-              <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
-              <span>Call +91 83026 48461</span>
+              <Mail className="w-4 h-4 text-[#FA7D3C]" />
+              <span>Email: contact@staffclicks.com</span>
             </a>
           </div>
         </div>

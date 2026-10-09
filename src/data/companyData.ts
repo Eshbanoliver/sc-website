@@ -3,7 +3,7 @@ import { CompanyInfo } from "../types";
 export const COMPANY_INFO: CompanyInfo = {
   name: "Staff Clicks",
   tagline: "Your Trusted Workforce for Smarter Business Operations",
-  phone: "+91 83026 48461",
+  phone: "", // Temporarily hidden; will be added back in future
   email: "contact@staffclicks.com",
   operatingHours: "Monday – Saturday: 24/6 Coverage Aligned to All Timezones (EST, CST, PST, GMT, SGT, AEST & IST)",
   markets: [
