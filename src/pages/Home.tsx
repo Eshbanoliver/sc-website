@@ -24,6 +24,8 @@ import IndustryCard from "../components/IndustryCard";
 import GlobalMapGraphic from "../components/GlobalMapGraphic";
 import FAQAccordion from "../components/FAQAccordion";
 import BookingCalendar from "../components/BookingCalendar";
+import CompaniesServed from "../components/CompaniesServed";
+import ClientTestimonials from "../components/ClientTestimonials";
 import { SERVICES } from "../data/servicesData";
 import { INDUSTRIES } from "../data/industriesData";
 
@@ -735,12 +737,22 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
         </div>
       </section>
 
+      {/* WHICH COMPANIES WE ARE SERVING FOR */}
+      <section id="companies-served" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <CompaniesServed onOpenConsultation={onOpenConsultation} />
+      </section>
+
+      {/* CLIENT TESTIMONIALS */}
+      <section id="testimonials" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <ClientTestimonials onOpenConsultation={onOpenConsultation} />
+      </section>
+
       {/* GLOBAL PRESENCE SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Cross-Border Delivery"
           title="Supporting Businesses Across Borders"
-          subtitle="Whether you are building a support team in the UAE or looking for dependable operational assistance for your business in the USA or Canada, Staff Clicks is built to support distributed business operations."
+          subtitle="Whether you need operational assistance in the USA, Canada, United Kingdom, Singapore, Australia, or managed execution from our Ajmer delivery hub, Staff Clicks is built to support distributed business operations."
         />
 
         <div className="mt-12">
@@ -761,7 +773,7 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
           </h3>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            At Staff Clicks, we believe in honest partnerships without inflated metrics or fabricated claims. We measure our success through SLA compliance, daily task visibility, rigorous NDA protections, and consistent communication with every client across UAE, USA, and Canada.
+            At Staff Clicks, we believe in honest partnerships without inflated metrics or fabricated claims. We measure our success through SLA compliance, daily task visibility, rigorous NDA protections, and consistent communication with every client across Ajmer, USA, Canada, Singapore, Australia, and the United Kingdom.
           </p>
 
           <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
@@ -777,10 +789,6 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               <div className="text-xs font-bold uppercase text-[#FA7D3C] mb-1">Confidentiality Guarantee</div>
               <p className="text-xs text-slate-600">Non-Disclosure Agreements executed prior to initiating any operational work.</p>
             </div>
-          </div>
-
-          <div className="pt-2 text-xs text-slate-400 italic">
-            * Formal client feedback and case studies will be displayed here as long-term enterprise engagements mature.
           </div>
         </div>
       </section>

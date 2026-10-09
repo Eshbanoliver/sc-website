@@ -110,6 +110,16 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                 </Link>
               </li>
               <li>
+                <a href="/#companies-served" className="hover:text-white hover:translate-x-0.5 transition-all inline-block text-[#3cb4cb] font-semibold">
+                  Companies We Serve
+                </a>
+              </li>
+              <li>
+                <a href="/#testimonials" className="hover:text-white hover:translate-x-0.5 transition-all inline-block text-[#FA7D3C] font-semibold">
+                  Client Testimonials
+                </a>
+              </li>
+              <li>
                 <Link to="/contact" className="hover:text-white hover:translate-x-0.5 transition-all inline-block">
                   Contact Us
                 </Link>
@@ -158,7 +168,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   <MapPin className="w-3.5 h-3.5 text-[#FA7D3C]" />
                   <span>Operations Hub:</span>
                 </div>
-                <p className="text-slate-300 mt-0.5">Dubai, United Arab Emirates (UAE)</p>
+                <p className="text-slate-300 mt-0.5">Ajmer, Rajasthan, India</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white/[0.06] border border-white/10">
@@ -166,8 +176,8 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   <Globe className="w-3.5 h-3.5 text-[#2E8D9F]" />
                   <span>Primary Client Markets:</span>
                 </div>
-                <p className="text-slate-300 mt-0.5">USA & Canada</p>
-                <p className="text-[11px] text-slate-400">Synchronized to EST, CST & PST</p>
+                <p className="text-slate-300 mt-0.5">USA, Canada, UK, Singapore & Australia</p>
+                <p className="text-[11px] text-slate-400">Synchronized across EST, PST, GMT, SGT & AEST</p>
               </div>
 
               <div className="pt-2">
