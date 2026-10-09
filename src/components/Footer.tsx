@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PhoneCall, MapPin, Globe, ArrowRight, ShieldCheck } from "lucide-react";
+import { 
+  PhoneCall, 
+  MapPin, 
+  Globe, 
+  ArrowRight, 
+  ShieldCheck, 
+  Instagram, 
+  Facebook, 
+  Linkedin 
+} from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 
 interface FooterProps {
@@ -62,7 +71,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Staff Clicks is a modern Virtual Assistance & Business Process Outsourcing company helping businesses across UAE, USA, and Canada streamline everyday operations with reliable, skilled remote professionals.
+              Staff Clicks is a modern Virtual Assistance & Business Process Outsourcing company helping businesses across Ajmer, USA, Canada, Singapore, Australia, and the United Kingdom streamline everyday operations with reliable, skilled remote professionals.
             </p>
 
             <div className="pt-2 text-xs text-slate-300 space-y-1.5">
@@ -163,21 +172,48 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
             </h4>
 
             <div className="space-y-3 text-xs sm:text-sm">
-              <div className="p-3.5 rounded-xl bg-white/[0.06] border border-white/10">
-                <div className="font-bold text-white flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#FA7D3C]" />
-                  <span>Operations Hub:</span>
+              <div className="p-3.5 rounded-xl bg-white/[0.06] border border-white/10 space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <div className="font-bold text-white flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-[#2E8D9F]" />
+                    <span>Serving Markets & Hub:</span>
+                  </div>
+                  <span className="text-[10px] font-extrabold text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    Active Sync
+                  </span>
                 </div>
-                <p className="text-slate-300 mt-0.5">Ajmer, Rajasthan, India</p>
-              </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.06] border border-white/10">
-                <div className="font-bold text-white flex items-center gap-1.5">
-                  <Globe className="w-3.5 h-3.5 text-[#2E8D9F]" />
-                  <span>Primary Client Markets:</span>
+                <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs pt-1">
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇮🇳</span>
+                    <strong className="text-white">Ajmer</strong>
+                    <span className="text-[10px] text-slate-400">(Hub)</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇺🇸</span>
+                    <strong className="text-white">USA</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇨🇦</span>
+                    <strong className="text-white">Canada</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇸🇬</span>
+                    <strong className="text-white">Singapore</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇦🇺</span>
+                    <strong className="text-white">Australia</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-200">
+                    <span className="text-sm">🇬🇧</span>
+                    <strong className="text-white">UK</strong>
+                  </div>
                 </div>
-                <p className="text-slate-300 mt-0.5">USA, Canada, UK, Singapore & Australia</p>
-                <p className="text-[11px] text-slate-400">Synchronized across EST, PST, GMT, SGT & AEST</p>
+
+                <p className="text-[11px] text-slate-400 pt-1.5 border-t border-white/10">
+                  Synchronized across EST, PST, GMT, SGT, AEST & IST
+                </p>
               </div>
 
               <div className="pt-2">
@@ -191,6 +227,57 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   <PhoneCall className="w-4 h-4 text-[#FA7D3C]" />
                   +91 83026 48461
                 </a>
+              </div>
+
+              {/* Social Media Icons Below Number */}
+              <div className="pt-2">
+                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-bold block mb-2">
+                  Follow Us:
+                </span>
+                <div className="flex items-center gap-2.5">
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Staff Clicks on Instagram"
+                    title="Instagram"
+                    className="w-8 h-8 rounded-lg bg-white/10 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 border border-white/10 shadow-xs"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Staff Clicks on Facebook"
+                    title="Facebook"
+                    className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#1877F2] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 border border-white/10 shadow-xs"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Staff Clicks on LinkedIn"
+                    title="LinkedIn"
+                    className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#0A66C2] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 border border-white/10 shadow-xs"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://x.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Staff Clicks on X (Twitter)"
+                    title="Twitter / X"
+                    className="w-8 h-8 rounded-lg bg-white/10 hover:bg-black text-white flex items-center justify-center transition-all duration-200 hover:scale-110 border border-white/10 shadow-xs"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
