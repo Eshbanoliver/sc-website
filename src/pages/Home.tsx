@@ -240,24 +240,68 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
 
                   {/* Team Synchronicity Status */}
                   <div className="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/60 mb-4">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center justify-between mb-2.5">
                       <span className="text-[11px] uppercase tracking-wider text-slate-400 font-bold">
                         Workforce Timezone Synchronization
                       </span>
-                      <span className="text-xs font-bold text-[#FA7D3C]">Active Sync</span>
+                      <span className="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Active Sync • All Countries
+                      </span>
                     </div>
-                    <div className="grid grid-cols-3 gap-2 text-center pt-2">
-                      <div className="p-2 rounded-xl bg-slate-900/60 border border-slate-700/50">
-                        <div className="text-xs font-bold text-white">UAE</div>
-                        <div className="text-[10px] text-slate-400">Dubai Hub</div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center pt-1">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">Ajmer</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">IST • Delivery Hub</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
                       </div>
-                      <div className="p-2 rounded-xl bg-slate-900/60 border border-[#2E8D9F]/60">
-                        <div className="text-xs font-bold text-[#3cb4cb]">USA</div>
-                        <div className="text-[10px] text-slate-400">EST / CST / PST</div>
+
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">USA</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">EST / CST / PST</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
                       </div>
-                      <div className="p-2 rounded-xl bg-slate-900/60 border border-slate-700/50">
-                        <div className="text-xs font-bold text-white">Canada</div>
-                        <div className="text-[10px] text-slate-400">B2B Coverage</div>
+
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">Canada</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">EST / PST Coverage</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
+                      </div>
+
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">Singapore</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">SGT (APAC)</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
+                      </div>
+
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">Australia</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">AEST / AWST</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
+                      </div>
+
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/70 border border-[#2E8D9F]/60 transition-all hover:border-emerald-400/70">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="text-xs font-bold text-[#3cb4cb]">United Kingdom</span>
+                        </div>
+                        <div className="text-[10px] text-slate-300 mt-0.5">GMT / BST</div>
+                        <div className="text-[9px] font-semibold text-emerald-400 mt-0.5">Active Sync</div>
                       </div>
                     </div>
                   </div>
