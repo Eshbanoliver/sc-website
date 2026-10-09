@@ -7,10 +7,10 @@ import {
   Globe2, 
   Clock, 
   CheckCircle2, 
-  HeartHandshake
+  HeartHandshake,
+  Mail
 } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
-import GlobalMapGraphic from "../components/GlobalMapGraphic";
 
 interface AboutProps {
   onOpenConsultation: () => void;
@@ -46,6 +46,66 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
     "No lock-in contracts: scale support hours up or down based on genuine workflow needs",
     "Continuous skill enhancement and workflow audits supervised from our Ajmer delivery hub",
     "Transparent end-of-day reporting with itemized task time allocations"
+  ];
+
+  const leadershipTeam = [
+    {
+      role: "Owner & Founder",
+      name: "Eshban Oliver",
+      badge: "Founder & Owner",
+      badgeColor: "bg-[#FA7D3C]/10 text-[#FA7D3C] border-[#FA7D3C]/30",
+      avatarBg: "from-[#093965] to-[#2E8D9F]",
+      initials: "EO",
+      focus: "Strategic Vision & Global Partnerships",
+      bio: "Guides the overarching vision of Staff Clicks, establishing high-performance operations in Ajmer to deliver dependable, cross-border workforce solutions to international enterprises.",
+      responsibilities: [
+        "Global Strategy & Expansion",
+        "Strategic Partnerships & Key Accounts",
+        "Operational Culture & Integrity"
+      ],
+      social: {
+        linkedin: "https://linkedin.com",
+        email: "mailto:contact@staffclicks.com"
+      }
+    },
+    {
+      role: "Chief Executive Officer",
+      name: "Chief Executive Officer",
+      badge: "Executive Leadership (CEO)",
+      badgeColor: "bg-[#093965]/10 text-[#093965] border-[#093965]/20",
+      avatarBg: "from-[#2E8D9F] to-[#093965]",
+      initials: "CEO",
+      focus: "Operational Delivery & Enterprise Scaling",
+      bio: "Directs international workforce deployment, strict SLA performance governance, and seamless service execution across North America, Europe, and Asia-Pacific.",
+      responsibilities: [
+        "Cross-Border SLA Delivery",
+        "Team Onboarding & Quality Control",
+        "Enterprise Growth & Account Scaling"
+      ],
+      social: {
+        linkedin: "https://linkedin.com",
+        email: "mailto:contact@staffclicks.com"
+      }
+    },
+    {
+      role: "Chief Technology Officer",
+      name: "Chief Technology Officer",
+      badge: "Technology & Systems (CTO)",
+      badgeColor: "bg-purple-500/10 text-purple-700 border-purple-200",
+      avatarBg: "from-purple-700 to-[#093965]",
+      initials: "CTO",
+      focus: "Infrastructure, Automation & Data Security",
+      bio: "Leads technical infrastructure, robust NDA and data encryption frameworks, and digital workflow tools to ensure ironclad confidentiality and zero operational latency.",
+      responsibilities: [
+        "Data Encryption & NDA Compliance",
+        "Digital Workflow & Tool Automation",
+        "High-Availability IT Infrastructure"
+      ],
+      social: {
+        linkedin: "https://linkedin.com",
+        email: "mailto:contact@staffclicks.com"
+      }
+    }
   ];
 
   return (
@@ -201,9 +261,99 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
         </div>
       </section>
 
-      {/* GLOBAL GRAPHIC */}
+      {/* EXECUTIVE LEADERSHIP SECTION (OWNER, CEO, CTO) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <GlobalMapGraphic />
+        <SectionHeader
+          badge="Executive Leadership"
+          title="Meet the Leadership Guiding Staff Clicks"
+          subtitle="The visionary strategists, operational leaders, and technology architects dedicated to empowering your business with world-class remote staffing from our Ajmer delivery hub."
+        />
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {leadershipTeam.map((leader, idx) => (
+            <div
+              key={idx}
+              className="group relative p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#2E8D9F] transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 overflow-hidden"
+            >
+              {/* Top Accent Gradient on Hover */}
+              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#093965] via-[#2E8D9F] to-[#FA7D3C] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+              <div className="space-y-6">
+                {/* Avatar & Badges */}
+                <div className="flex items-start justify-between gap-4">
+                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-tr ${leader.avatarBg} text-white font-black text-2xl flex items-center justify-center shadow-lg border-2 border-white/80 shrink-0 group-hover:scale-105 transition-transform duration-300`}>
+                    {leader.initials}
+                  </div>
+                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border ${leader.badgeColor}`}>
+                    {leader.badge}
+                  </span>
+                </div>
+
+                {/* Name & Title */}
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#093965]">
+                    {leader.name}
+                  </h3>
+                  <div className="text-sm font-bold text-[#FA7D3C] mt-0.5">
+                    {leader.role}
+                  </div>
+                  <div className="text-xs font-semibold text-slate-500 mt-1">
+                    {leader.focus}
+                  </div>
+                </div>
+
+                {/* Bio */}
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {leader.bio}
+                </p>
+
+                {/* Core Responsibilities */}
+                <div className="space-y-2 pt-2 border-t border-slate-100">
+                  <span className="text-[11px] uppercase tracking-wider font-extrabold text-slate-400 block">
+                    Strategic Responsibilities:
+                  </span>
+                  <ul className="space-y-1.5">
+                    {leader.responsibilities.map((resp, i) => (
+                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#2E8D9F] shrink-0" />
+                        <span>{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Bottom Social / Contact Bar */}
+              <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-bold text-[#093965]">
+                  Staff Clicks Executive
+                </span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={leader.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${leader.name} on LinkedIn`}
+                    title="LinkedIn"
+                    className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0A66C2] text-slate-600 hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110"
+                  >
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href={leader.social.email}
+                    aria-label={`Email ${leader.name}`}
+                    title="Email"
+                    className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#FA7D3C] text-slate-600 hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110"
+                  >
+                    <Mail className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CTA BANNER */}
