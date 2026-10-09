@@ -66,7 +66,7 @@ export default function WhyStaffClicks({ onOpenConsultation }: WhyStaffClicksPro
     {
       criteria: "Accountability & Oversight",
       freelancer: "Self-reported, high risk of sudden disappearance or dropped tasks",
-      staffClicks: "Supervised delivery center in Dubai, UAE with internal QA checks"
+      staffClicks: "Supervised delivery center in Ajmer with internal QA checks"
     },
     {
       criteria: "Data Security & NDAs",
@@ -76,7 +76,7 @@ export default function WhyStaffClicks({ onOpenConsultation }: WhyStaffClicksPro
     {
       criteria: "Time-Zone Synchronization",
       freelancer: "Unpredictable hours, irregular response windows",
-      staffClicks: "Guaranteed shift alignment across USA (EST/CST/PST), Canada, or UAE (GST)"
+      staffClicks: "Guaranteed shift alignment across USA, Canada, UK, Singapore, Australia, and India"
     },
     {
       criteria: "Scalability",

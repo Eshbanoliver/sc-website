@@ -71,7 +71,7 @@ export default function Careers(): React.JSX.Element {
     {
       icon: HeartHandshake,
       title: "Collaborative Culture",
-      desc: "A supportive, respectful work environment centered in Dubai, UAE, dedicated to work-life balance and long-term retention."
+      desc: "A supportive, respectful work environment centered in Ajmer with hybrid & remote options, dedicated to work-life balance and long-term retention."
     }
   ];
 
@@ -164,7 +164,7 @@ export default function Careers(): React.JSX.Element {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{track.desc}</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span>Location: Dubai Hub / Remote</span>
+                  <span>Location: Ajmer Hub / Remote</span>
                   <span className="text-[#FA7D3C] font-semibold">Active Pool</span>
                 </div>
               </div>

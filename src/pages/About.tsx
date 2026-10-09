@@ -44,7 +44,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
     "Strict Non-Disclosure Agreements (NDAs) protecting all client proprietary information",
     "Direct integration into your existing communication stack (Slack, Teams, Email, Zoom)",
     "No lock-in contracts: scale support hours up or down based on genuine workflow needs",
-    "Continuous skill enhancement and workflow audits supervised from our Dubai delivery hub",
+    "Continuous skill enhancement and workflow audits supervised from our Ajmer delivery hub",
     "Transparent end-of-day reporting with itemized task time allocations"
   ];
 
@@ -63,7 +63,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Staff Clicks is a specialized Virtual Assistance & Business Process Outsourcing company dedicated to helping growing companies across the UAE, USA, and Canada scale efficiently with reliable remote staffing.
+            Staff Clicks is a specialized Virtual Assistance & Business Process Outsourcing company dedicated to helping growing companies across Ajmer, USA, Canada, Singapore, Australia, and the United Kingdom scale efficiently with reliable remote staffing.
           </p>
         </div>
       </section>
@@ -140,10 +140,10 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                 Delivery Center Overview
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
-                Grounded in Dubai, Connected Globally
+                Grounded in Ajmer, Connected Globally
               </h2>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Headquartered with our primary operations center in <strong>Dubai, United Arab Emirates (UAE)</strong>, Staff Clicks combines rich regional talent with international management standards. We support clients located across <strong>UAE, USA, and Canada</strong>, enabling businesses to leverage high-caliber staffing without geographic boundaries.
+                Headquartered with our primary operations center in <strong>Ajmer, Rajasthan (India)</strong>, Staff Clicks combines rich regional talent with international management standards. We support clients located across <strong>Ajmer, USA, Canada, Singapore, Australia, and the United Kingdom</strong>, enabling businesses to leverage high-caliber staffing without geographic boundaries.
               </p>
 
               <div className="space-y-3 pt-2">
@@ -165,12 +165,12 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                 <div className="space-y-3 text-sm">
                   <div className="pb-3 border-b border-slate-700">
                     <span className="text-slate-400 block text-xs">Primary Operations Hub:</span>
-                    <span className="font-semibold text-white">Dubai, United Arab Emirates (UAE)</span>
+                    <span className="font-semibold text-white">Ajmer, Rajasthan, India</span>
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">
                     <span className="text-slate-400 block text-xs">Primary Markets Served:</span>
-                    <span className="font-semibold text-white">UAE, USA & Canada</span>
+                    <span className="font-semibold text-white">Ajmer, USA, Canada, Singapore, Australia & UK</span>
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">

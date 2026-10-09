@@ -110,13 +110,13 @@ export default function Contact(): React.JSX.Element {
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-                      Headquarters & Operations Hub
+                      Delivery & Operations Hub
                     </span>
                     <span className="text-base font-bold text-[#093965] block">
-                      Dubai, United Arab Emirates (UAE)
+                      Ajmer, Rajasthan, India
                     </span>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Workforce coordination, QA supervision, and process execution center
+                      Workforce coordination, QA supervision, and global process execution center
                     </p>
                   </div>
                 </div>
@@ -131,10 +131,10 @@ export default function Contact(): React.JSX.Element {
                       Client Service Markets
                     </span>
                     <span className="text-base font-bold text-[#093965] block">
-                      UAE, USA & Canada
+                      Ajmer, USA, Canada, Singapore, Australia & UK
                     </span>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Synchronized remote support across North American & Middle Eastern business hours
+                      Synchronized remote support across North American, European, and Asia-Pacific business hours
                     </p>
                   </div>
                 </div>

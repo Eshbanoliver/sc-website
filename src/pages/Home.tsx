@@ -419,11 +419,11 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
                   <div className="pt-4 border-t border-white/20 space-y-3">
                     <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-100">
                       <CheckCircle2 className="w-4 h-4 text-[#FA7D3C] shrink-0" />
-                      <span>Delivery oversight from Dubai, UAE operations hub</span>
+                      <span>Delivery oversight from Ajmer operations hub</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-100">
                       <CheckCircle2 className="w-4 h-4 text-[#FA7D3C] shrink-0" />
-                      <span>Dedicated time zone alignment for USA & Canadian partners</span>
+                      <span>Dedicated time zone alignment for global partners (USA, Canada, UK, Singapore, Australia)</span>
                     </div>
                   </div>
                 </div>
