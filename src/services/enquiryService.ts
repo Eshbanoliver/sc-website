@@ -66,6 +66,23 @@ export async function submitEnquiryToSheet(payload: EnquiryPayload): Promise<{ s
   }
 
   try {
+    // Sanitize payload fields to strictly primitive strings to avoid any circular references or DOM nodes
+    const cleanPayload: Record<string, string> = {};
+    for (const [key, value] of Object.entries(payload)) {
+      if (value === null || value === undefined) {
+        cleanPayload[key] = "";
+      } else if (typeof value === "string") {
+        cleanPayload[key] = value;
+      } else if (typeof value === "number" || typeof value === "boolean") {
+        cleanPayload[key] = String(value);
+      } else if (typeof value === "object" && "innerText" in (value as any)) {
+        cleanPayload[key] = (value as any).innerText || (value as any).textContent || "";
+      } else {
+        cleanPayload[key] = String(value);
+      }
+    }
+    cleanPayload.submittedAt = new Date().toISOString();
+
     // We send payload as plain text with mode: "no-cors" so browsers bypass CORS preflight restrictions
     // on Google Apps Script endpoints while Google Apps Script parses e.postData.contents.
     await fetch(scriptUrl, {
@@ -74,10 +91,7 @@ export async function submitEnquiryToSheet(payload: EnquiryPayload): Promise<{ s
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
       },
-      body: JSON.stringify({
-        ...payload,
-        submittedAt: new Date().toISOString(),
-      }),
+      body: JSON.stringify(cleanPayload),
     });
 
     return { success: true };
