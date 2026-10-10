@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { 
   HelpCircle, 
   Search, 
@@ -7,6 +7,7 @@ import {
 import FAQAccordion from "../components/FAQAccordion";
 import { FAQS } from "../data/faqsData";
 import { FAQItem } from "../types";
+import { logFaqSearch } from "../services/enquiryService";
 
 interface FAQProps {
   onOpenConsultation?: () => void;
@@ -14,6 +15,7 @@ interface FAQProps {
 
 export default function FAQ({ onOpenConsultation }: FAQProps): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
+  const lastLoggedQueryRef = useRef<string>("");
 
   const filteredFaqs: FAQItem[] = searchTerm.trim() === ""
     ? FAQS
@@ -22,6 +24,30 @@ export default function FAQ({ onOpenConsultation }: FAQProps): React.JSX.Element
                f.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
                f.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
+
+  // Debounced logging of FAQ search queries to Google Sheet
+  useEffect(() => {
+    const trimmed = searchTerm.trim();
+    if (trimmed.length < 2) return;
+    if (trimmed === lastLoggedQueryRef.current) return;
+
+    const timer = setTimeout(() => {
+      lastLoggedQueryRef.current = trimmed;
+      logFaqSearch(trimmed, filteredFaqs.length);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [searchTerm, filteredFaqs.length]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      const trimmed = searchTerm.trim();
+      if (trimmed.length >= 2 && trimmed !== lastLoggedQueryRef.current) {
+        lastLoggedQueryRef.current = trimmed;
+        logFaqSearch(trimmed, filteredFaqs.length);
+      }
+    }
+  };
 
   return (
     <div className="space-y-24 sm:space-y-28 pt-8 pb-16">
@@ -47,6 +73,7 @@ export default function FAQ({ onOpenConsultation }: FAQProps): React.JSX.Element
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={handleKeyDown}
               placeholder="Search questions (e.g. security, hours, scale)..."
               className="w-full px-5 py-3.5 pl-12 rounded-2xl border border-slate-300 text-sm shadow-xs focus:outline-none focus:border-[#2E8D9F] focus:ring-2 focus:ring-[#2E8D9F]/20 bg-white"
             />

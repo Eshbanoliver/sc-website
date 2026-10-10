@@ -124,6 +124,19 @@ function doPost(e) {
         data.linkedIn || "",
         data.notes || ""
       ]);
+    } else if (formType === "FAQ Search") {
+      const sheet = getOrCreateSheet(ss, "FAQ Searches", [
+        "Timestamp",
+        "Search Query",
+        "Results Found",
+        "Device / Platform"
+      ]);
+      sheet.appendRow([
+        timestamp,
+        data.searchQuery || data.query || "",
+        data.resultsCount !== undefined ? data.resultsCount : "",
+        data.device || "Web"
+      ]);
     } else {
       const sheet = getOrCreateSheet(ss, "Other Inquiries", [
         "Timestamp",

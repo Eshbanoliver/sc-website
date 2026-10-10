@@ -45,10 +45,39 @@ export interface CareerEnquiryPayload {
   notes?: string;
 }
 
+export interface FaqSearchPayload {
+  formType: "FAQ Search";
+  searchQuery: string;
+  resultsCount: number;
+  device?: string;
+}
+
 export type EnquiryPayload =
   | ContactEnquiryPayload
   | BookingEnquiryPayload
-  | CareerEnquiryPayload;
+  | CareerEnquiryPayload
+  | FaqSearchPayload;
+
+/**
+ * Log a user's search query on the FAQ page
+ */
+export async function logFaqSearch(searchQuery: string, resultsCount: number): Promise<void> {
+  const query = searchQuery.trim();
+  if (!query || query.length < 2) return;
+
+  try {
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    await submitEnquiryToSheet({
+      formType: "FAQ Search",
+      searchQuery: query,
+      resultsCount,
+      device: isMobile ? "Mobile" : "Desktop"
+    });
+  } catch (err) {
+    // Non-blocking log
+    console.debug("[FAQ Search] Log failed:", err);
+  }
+}
 
 export async function submitEnquiryToSheet(payload: EnquiryPayload): Promise<{ success: boolean; simulated?: boolean }> {
   const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL?.trim();
