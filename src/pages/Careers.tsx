@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import { CareerFormData } from "../types";
+import { submitEnquiryToSheet } from "../services/enquiryService";
 
 export default function Careers(): React.JSX.Element {
   const [formData, setFormData] = useState<CareerFormData>({
@@ -24,6 +25,7 @@ export default function Careers(): React.JSX.Element {
 
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string>("");
 
   const careerTracks = [
     {
@@ -75,13 +77,28 @@ export default function Careers(): React.JSX.Element {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    setSubmitError("");
+    try {
+      await submitEnquiryToSheet({
+        formType: "Career Application",
+        fullName: formData.fullName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        roleInterest: formData.roleInterest,
+        experienceYears: formData.experienceYears,
+        linkedIn: formData.linkedIn.trim(),
+        notes: formData.notes.trim()
+      });
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 800);
+    } catch (err) {
+      console.error("Career application submission failed:", err);
+      setIsSubmitting(false);
+      setSubmitError("We could not submit your application at this moment. Please try again or email your CV to careers@staffclicks.com.");
+    }
   };
 
   return (
@@ -312,6 +329,12 @@ export default function Careers(): React.JSX.Element {
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:border-[#2E8D9F] focus:outline-none"
                 />
               </div>
+
+              {submitError && (
+                <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs">
+                  {submitError}
+                </div>
+              )}
 
               <div className="pt-2">
                 <button

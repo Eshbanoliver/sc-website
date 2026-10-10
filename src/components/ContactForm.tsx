@@ -3,6 +3,8 @@ import { Send, Mail, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 import { ContactFormData } from "../types";
 
+import { submitEnquiryToSheet } from "../services/enquiryService";
+
 interface ContactFormProps {
   prefilledService?: string;
   onSuccess?: () => void;
@@ -22,6 +24,7 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string>("");
 
   const validate = (): Record<string, string> => {
     const newErrors: Record<string, string> = {};
@@ -43,10 +46,14 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
     }
+    if (submitError) {
+      setSubmitError("");
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError("");
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -55,12 +62,26 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
 
     setIsSubmitting(true);
 
-    // Simulated API call point - ready to hook to any backend endpoint or email API
-    setTimeout(() => {
+    try {
+      await submitEnquiryToSheet({
+        formType: "Contact / Consultation",
+        fullName: formData.fullName.trim(),
+        businessEmail: formData.businessEmail.trim(),
+        phoneNumber: formData.phoneNumber.trim(),
+        companyName: formData.companyName.trim(),
+        country: formData.country,
+        serviceInterestedIn: formData.serviceInterestedIn,
+        message: formData.message.trim()
+      });
+
       setIsSubmitting(false);
       setSubmitted(true);
       if (onSuccess) onSuccess();
-    }, 900);
+    } catch (err) {
+      console.error("Submission failed:", err);
+      setIsSubmitting(false);
+      setSubmitError("We encountered an issue submitting your enquiry. Please try again or reach out at contact@staffclicks.com.");
+    }
   };
 
   if (submitted) {
@@ -269,6 +290,13 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
           </p>
         )}
       </div>
+
+      {submitError && (
+        <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start gap-2">
+          <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+          <span>{submitError}</span>
+        </div>
+      )}
 
       {/* Submit Button */}
       <button

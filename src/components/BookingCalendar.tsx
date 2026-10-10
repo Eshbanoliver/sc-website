@@ -9,8 +9,11 @@ import {
   Sparkles,
   ArrowRight,
   Globe2,
-  PhoneCall
+  PhoneCall,
+  Loader2,
+  AlertCircle
 } from "lucide-react";
+import { submitEnquiryToSheet } from "../services/enquiryService";
 
 interface TimeSlot {
   time: string;
@@ -68,8 +71,12 @@ export default function BookingCalendar(): React.JSX.Element {
   const [selectedSession, setSelectedSession] = useState<string>("consultation");
   const [selectedTimezone, setSelectedTimezone] = useState<"EST" | "CST" | "PST" | "GMT" | "SGT" | "AEST" | "IST">("EST");
   const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
   const [serviceNeeded, setServiceNeeded] = useState<string>("Virtual Assistance & Admin");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string>("");
 
   // Calendar calculations
   const year = currentMonth.getFullYear();
@@ -141,9 +148,31 @@ export default function BookingCalendar(): React.JSX.Element {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   // Form submission handler
-  const handleBookMeeting = (e: React.FormEvent) => {
+  const handleBookMeeting = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+    try {
+      await submitEnquiryToSheet({
+        formType: "Meeting Booking",
+        fullName: fullName.trim() || "Prospective Client",
+        email: email.trim(),
+        phone: phone.trim(),
+        companyName: companyName.trim(),
+        serviceNeeded,
+        sessionTitle: activeSessionData.title,
+        duration: activeSessionData.duration,
+        date: formattedSelectedDate,
+        timeSlot: selectedSlot,
+        timezone: selectedTimezone
+      });
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Booking submission failed:", err);
+      setIsSubmitting(false);
+      setSubmitError("Failed to submit meeting request. Please try again or email contact@staffclicks.com.");
+    }
   };
 
   return (
@@ -415,6 +444,27 @@ export default function BookingCalendar(): React.JSX.Element {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Work Email (e.g. sarah@company.com)"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Phone / WhatsApp (Optional)"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#2E8D9F] focus:ring-1 focus:ring-[#2E8D9F]"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <select
                     value={serviceNeeded}
@@ -443,14 +493,31 @@ export default function BookingCalendar(): React.JSX.Element {
                   </div>
                 </div>
 
+                {submitError && (
+                  <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 text-red-500 shrink-0" />
+                    <span>{submitError}</span>
+                  </div>
+                )}
+
                 {/* Action Button: Book Meeting */}
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#093965] to-[#2E8D9F] hover:opacity-95 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-3 cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#093965] to-[#2E8D9F] hover:opacity-95 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-3 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                 >
-                  <CalendarIcon className="w-5 h-5 text-[#FA7D3C]" />
-                  <span>Confirm & Request Schedule</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin text-[#FA7D3C]" />
+                      <span>Scheduling Your Session...</span>
+                    </>
+                  ) : (
+                    <>
+                      <CalendarIcon className="w-5 h-5 text-[#FA7D3C]" />
+                      <span>Confirm & Request Schedule</span>
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </>
+                  )}
                 </button>
 
                 <p className="text-center text-[11px] text-slate-400">
