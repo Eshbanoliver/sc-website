@@ -121,11 +121,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
 
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="mailto:contact@staffclicks.com"
+              href="mailto:info@staffclicks.com"
               className="flex items-center gap-1.5 font-bold text-white hover:text-[#FA7D3C] transition-colors text-[11px] sm:text-xs whitespace-nowrap"
             >
               <Mail className="w-3.5 h-3.5 text-[#FA7D3C]" />
-              <span className="hidden sm:inline">contact@staffclicks.com</span>
+              <span className="hidden sm:inline">info@staffclicks.com</span>
               <span className="sm:hidden font-extrabold text-[#FA7D3C]">Email Us</span>
             </a>
           </div>
@@ -349,11 +349,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps): React.JSX.E
 
             <div className="pt-3 border-t border-slate-100 space-y-2.5">
               <a
-                href="mailto:contact@staffclicks.com"
+                href="mailto:info@staffclicks.com"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 text-sm font-bold text-[#093965] bg-slate-50/80 hover:bg-slate-100 transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#FA7D3C]" />
-                <span>contact@staffclicks.com</span>
+                <span>info@staffclicks.com</span>
               </a>
 
               <button

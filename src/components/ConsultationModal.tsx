@@ -58,11 +58,11 @@ export default function ConsultationModal({ isOpen, onClose, prefilledService = 
           <div className="mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm">
             <span className="text-slate-600">Prefer direct email correspondence?</span>
             <a
-              href="mailto:contact@staffclicks.com"
+              href="mailto:info@staffclicks.com"
               className="inline-flex items-center gap-1.5 font-bold text-[#093965] hover:text-[#FA7D3C] transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-[#FA7D3C]" />
-              <span>contact@staffclicks.com</span>
+              <span>info@staffclicks.com</span>
             </a>
           </div>
 

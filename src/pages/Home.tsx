@@ -195,13 +195,13 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               {/* Direct phone quick contact */}
               <div className="pt-3 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-600">
                 <a
-                  href="mailto:contact@staffclicks.com"
+                  href="mailto:info@staffclicks.com"
                   className="inline-flex items-center gap-2 font-bold text-[#093965] hover:text-[#FA7D3C] transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-[#093965]/10 flex items-center justify-center text-[#093965]">
                     <Mail className="w-3.5 h-3.5 text-[#2E8D9F]" />
                   </div>
-                  <span>Inquiries: contact@staffclicks.com</span>
+                  <span>Inquiries: info@staffclicks.com</span>
                 </a>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="text-slate-500 font-medium">Flexible Monthly & Custom Retention Plans</span>
@@ -847,11 +847,11 @@ export default function Home({ onOpenConsultation }: HomeProps): React.JSX.Eleme
               </button>
 
               <a
-                href="mailto:contact@staffclicks.com"
+                href="mailto:info@staffclicks.com"
                 className="w-full sm:w-auto px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <Mail className="w-4 h-4 text-[#FA7D3C]" />
-                <span>contact@staffclicks.com</span>
+                <span>info@staffclicks.com</span>
               </a>
             </div>
 

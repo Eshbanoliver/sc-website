@@ -71,10 +71,10 @@ export default function Contact(): React.JSX.Element {
                       General & B2B Inquiries
                     </span>
                     <a
-                      href="mailto:contact@staffclicks.com"
+                      href="mailto:info@staffclicks.com"
                       className="text-base font-bold text-[#093965] hover:text-[#2E8D9F] transition-colors"
                     >
-                      contact@staffclicks.com
+                      info@staffclicks.com
                     </a>
                     <p className="text-xs text-slate-500 mt-0.5">
                       Responses typically within 1 business day

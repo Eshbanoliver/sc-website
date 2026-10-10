@@ -132,11 +132,11 @@ export default function FAQ({ onOpenConsultation }: FAQProps): React.JSX.Element
               Ask an Advisor Directly
             </button>
             <a
-              href="mailto:contact@staffclicks.com"
+              href="mailto:info@staffclicks.com"
               className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all flex items-center gap-2"
             >
               <Mail className="w-4 h-4 text-[#FA7D3C]" />
-              <span>Email: contact@staffclicks.com</span>
+              <span>Email: info@staffclicks.com</span>
             </a>
           </div>
         </div>

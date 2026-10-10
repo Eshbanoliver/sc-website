@@ -70,7 +70,7 @@ export default function ServiceDetail({ onOpenConsultation }: ServiceDetailProps
                 </button>
 
                 <a
-                  href="mailto:contact@staffclicks.com"
+                  href="mailto:info@staffclicks.com"
                   className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#093965] font-bold text-sm border border-slate-300 transition-all flex items-center gap-2"
                 >
                   <Mail className="w-4 h-4 text-[#FA7D3C]" />

@@ -4,7 +4,7 @@ export const COMPANY_INFO: CompanyInfo = {
   name: "Staff Clicks",
   tagline: "Your Trusted Workforce for Smarter Business Operations",
   phone: "", // Temporarily hidden; will be added back in future
-  email: "contact@staffclicks.com",
+  email: "info@staffclicks.com",
   operatingHours: "Monday – Saturday: 24/6 Coverage Aligned to All Timezones (EST, CST, PST, GMT, SGT, AEST & IST)",
   markets: [
     { name: "Ajmer", hub: "Ajmer, India", note: "Delivery Center & Operations Hub" },

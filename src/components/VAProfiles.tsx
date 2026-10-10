@@ -349,11 +349,11 @@ export default function VAProfiles({ onOpenConsultation }: VAProfilesProps): Rea
             <ArrowRight className="w-4 h-4" />
           </button>
           <a
-            href="mailto:contact@staffclicks.com"
+            href="mailto:info@staffclicks.com"
             className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-all text-center flex items-center justify-center gap-2"
           >
             <Mail className="w-4 h-4 text-[#FA7D3C]" />
-            <span>contact@staffclicks.com</span>
+            <span>info@staffclicks.com</span>
           </a>
         </div>
       </div>

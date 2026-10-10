@@ -65,7 +65,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:contact@staffclicks.com"
+        email: "mailto:info@staffclicks.com"
       }
     },
     {
@@ -84,7 +84,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:contact@staffclicks.com"
+        email: "mailto:info@staffclicks.com"
       }
     },
     {
@@ -103,7 +103,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:contact@staffclicks.com"
+        email: "mailto:info@staffclicks.com"
       }
     }
   ];
@@ -240,7 +240,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
 
                   <div>
                     <span className="text-slate-400 block text-xs">Inquiries & Partnerships:</span>
-                    <span className="font-semibold text-white">contact@staffclicks.com</span>
+                    <span className="font-semibold text-white">info@staffclicks.com</span>
                   </div>
                 </div>
 

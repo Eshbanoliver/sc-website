@@ -80,7 +80,7 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
     } catch (err) {
       console.error("Submission failed:", err);
       setIsSubmitting(false);
-      setSubmitError("We encountered an issue submitting your enquiry. Please try again or reach out at contact@staffclicks.com.");
+      setSubmitError("We encountered an issue submitting your enquiry. Please try again or reach out at info@staffclicks.com.");
     }
   };
 
@@ -96,11 +96,11 @@ export default function ContactForm({ prefilledService = "", onSuccess }: Contac
         </p>
         <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="mailto:contact@staffclicks.com"
+            href="mailto:info@staffclicks.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#093965] text-white text-sm font-semibold hover:bg-[#062644] transition-colors"
           >
             <Mail className="w-4 h-4 text-[#FA7D3C]" />
-            <span>Direct Inquiries: contact@staffclicks.com</span>
+            <span>Direct Inquiries: info@staffclicks.com</span>
           </a>
           <button
             onClick={() => {

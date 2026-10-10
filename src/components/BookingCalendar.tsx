@@ -171,7 +171,7 @@ export default function BookingCalendar(): React.JSX.Element {
     } catch (err) {
       console.error("Booking submission failed:", err);
       setIsSubmitting(false);
-      setSubmitError("Failed to submit meeting request. Please try again or email contact@staffclicks.com.");
+      setSubmitError("Failed to submit meeting request. Please try again or email info@staffclicks.com.");
     }
   };
 
