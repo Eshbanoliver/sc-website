@@ -155,7 +155,7 @@ In the project directory, you can run:
 The build process produces a fully static Single Page Application (SPA) in the `dist` directory:
 
 ```bash
-npm run build
+
 ```
 
 ### Static Hosting & SPA Routing
