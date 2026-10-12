@@ -158,8 +158,6 @@ The build process produces a fully static Single Page Application (SPA) in the `
 
 ```
 
-### Static Hosting & SPA Routing
-Because this application uses client-side routing (`react-router`), the web server must rewrite non-asset requests to `index.html`.
 
 - **Apache / Shared Hosting (cPanel / Hostinger)**: A preconfigured [public/.htaccess](public/.htaccess) handles automatic rewrites on build output.
 - **Vercel / Netlify / Cloudflare Pages**: Automatic single-page fallback rule to `/index.html`.
