@@ -4,10 +4,10 @@ export const COMPANY_INFO: CompanyInfo = {
   name: "Staff Clicks",
   tagline: "Your Trusted Workforce for Smarter Business Operations",
   phone: "", // Temporarily hidden; will be added back in future
-  email: "info@staffclicks.com",
+  email: "staffclicks@gmail.com",
   operatingHours: "Monday – Saturday: 24/6 Coverage Aligned to All Timezones (EST, CST, PST, GMT, SGT, AEST & IST)",
   markets: [
-    { name: "Ajmer", hub: "Ajmer, India", note: "Delivery Center & Operations Hub" },
+    { name: "Ajmer", hub: "FJ6P+2M7, Kachery Road, Hathi Bhata, Ajmer, Rajasthan 305001", note: "Delivery Center & Operations Hub" },
     { name: "USA", hub: "United States", note: "Serving B2B Clients Nationwide" },
     { name: "Canada", hub: "Canada", note: "Remote Staffing & Process Support" },
     { name: "Singapore", hub: "Singapore", note: "Asia-Pacific Support" },

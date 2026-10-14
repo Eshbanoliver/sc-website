@@ -60,10 +60,12 @@ export default function PrivacyPolicy(): React.JSX.Element {
         <p>
           If you have questions or concerns regarding this Privacy Policy or our data handling practices, please contact us at:
         </p>
-        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1">
+        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
           <div><strong>Staff Clicks</strong></div>
-          <div>Headquarters & Operations Hub: Ajmer, Rajasthan, India</div>
-          <div>Email: info@staffclicks.com</div>
+          <div>Headquarters & Operations Hub: FJ6P+2M7, Kachery Road, Hathi Bhata, Ajmer, Rajasthan 305001</div>
+          <div>
+            Email: <a href="mailto:staffclicks@gmail.com" className="text-[#093965] font-semibold hover:underline">staffclicks@gmail.com</a>
+          </div>
         </div>
       </div>
     </div>

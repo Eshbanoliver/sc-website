@@ -65,7 +65,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:info@staffclicks.com"
+        email: "mailto:staffclicks@gmail.com"
       }
     },
     {
@@ -84,7 +84,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:info@staffclicks.com"
+        email: "mailto:staffclicks@gmail.com"
       }
     },
     {
@@ -103,7 +103,7 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
       ],
       social: {
         linkedin: "https://linkedin.com",
-        email: "mailto:info@staffclicks.com"
+        email: "mailto:staffclicks@gmail.com"
       }
     }
   ];
@@ -225,7 +225,14 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
                 <div className="space-y-3 text-sm">
                   <div className="pb-3 border-b border-slate-700">
                     <span className="text-slate-400 block text-xs">Primary Operations Hub:</span>
-                    <span className="font-semibold text-white">Ajmer, Rajasthan, India</span>
+                    <a 
+                      href="https://maps.google.com/?q=FJ6P%2B2M7%2C+Kachery+Road%2C+Hathi+Bhata%2C+Ajmer%2C+Rajasthan+305001"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-white hover:text-[#3cb4cb] transition-colors leading-snug block"
+                    >
+                      FJ6P+2M7, Kachery Road, Hathi Bhata, Ajmer, Rajasthan 305001
+                    </a>
                   </div>
 
                   <div className="pb-3 border-b border-slate-700">
@@ -240,7 +247,12 @@ export default function About({ onOpenConsultation }: AboutProps): React.JSX.Ele
 
                   <div>
                     <span className="text-slate-400 block text-xs">Inquiries & Partnerships:</span>
-                    <span className="font-semibold text-white">info@staffclicks.com</span>
+                    <a 
+                      href="mailto:staffclicks@gmail.com"
+                      className="font-semibold text-white hover:text-[#FA7D3C] transition-colors"
+                    >
+                      staffclicks@gmail.com
+                    </a>
                   </div>
                 </div>
 

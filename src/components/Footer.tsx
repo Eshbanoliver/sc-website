@@ -33,11 +33,11 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href="mailto:info@staffclicks.com"
+              href="mailto:staffclicks@gmail.com"
               className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-all flex items-center gap-2"
             >
               <Mail className="w-4 h-4 text-[#FA7D3C]" />
-              info@staffclicks.com
+              staffclicks@gmail.com
             </a>
             <button
               onClick={onOpenConsultation}
@@ -205,6 +205,20 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                 <p className="text-[11px] text-slate-400 pt-1.5 border-t border-white/10">
                   Synchronized across EST, PST, GMT, SGT, AEST & IST
                 </p>
+
+                <div className="pt-1.5 border-t border-white/10">
+                  <span className="text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">
+                    Ajmer Hub Address:
+                  </span>
+                  <a
+                    href="https://maps.google.com/?q=FJ6P%2B2M7%2C+Kachery+Road%2C+Hathi+Bhata%2C+Ajmer%2C+Rajasthan+305001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors block text-[11px] leading-snug"
+                  >
+                    FJ6P+2M7, Kachery Road, Hathi Bhata, Ajmer, Rajasthan 305001
+                  </a>
+                </div>
               </div>
 
               <div className="pt-2">
@@ -212,11 +226,11 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                   Direct Inquiries:
                 </span>
                 <a
-                  href="mailto:info@staffclicks.com"
+                  href="mailto:staffclicks@gmail.com"
                   className="text-white hover:text-[#FA7D3C] font-bold text-sm flex items-center gap-1.5 transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#FA7D3C]" />
-                  info@staffclicks.com
+                  staffclicks@gmail.com
                 </a>
               </div>
 
@@ -227,7 +241,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                 </span>
                 <div className="flex items-center gap-2.5">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/staffclicks/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Staff Clicks on Instagram"
@@ -239,7 +253,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                     </svg>
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61594685925115"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Staff Clicks on Facebook"
@@ -263,7 +277,7 @@ export default function Footer({ onOpenConsultation }: FooterProps): React.JSX.E
                     </svg>
                   </a>
                   <a
-                    href="https://x.com"
+                    href="https://x.com/Staffclicks"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Staff Clicks on X (Twitter)"

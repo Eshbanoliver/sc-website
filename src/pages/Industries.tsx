@@ -113,11 +113,11 @@ export default function Industries({ onOpenConsultation }: IndustriesProps): Rea
                   </button>
 
                   <a
-                    href="mailto:info@staffclicks.com"
+                    href="mailto:staffclicks@gmail.com"
                     className="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-colors flex items-center justify-center gap-2"
                   >
                     <Mail className="w-4 h-4 text-[#FA7D3C]" />
-                    <span>Email: info@staffclicks.com</span>
+                    <span>Email: staffclicks@gmail.com</span>
                   </a>
                 </div>
               </div>

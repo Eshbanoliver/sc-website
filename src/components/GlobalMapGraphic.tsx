@@ -223,7 +223,7 @@ export default function GlobalMapGraphic(): React.JSX.Element {
             <span>Strict data security, NDA-protected environments, and transparent communication protocols.</span>
           </div>
           <div className="font-mono text-white/80 shrink-0">
-            Inquiries: <strong className="text-white">info@staffclicks.com</strong>
+            Inquiries: <a href="mailto:staffclicks@gmail.com" className="text-white hover:text-[#FA7D3C] transition-colors font-bold">staffclicks@gmail.com</a>
           </div>
         </div>
       </div>

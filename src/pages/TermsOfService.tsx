@@ -54,9 +54,12 @@ export default function TermsOfService(): React.JSX.Element {
           These terms and agreements shall be governed by and construed in accordance with applicable laws, with primary operations situated in Ajmer, India, while honoring contractual commitments entered into with international enterprise clients in the USA, Canada, United Kingdom, Singapore, Australia, and globally.
         </p>
 
-        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1">
+        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
           <div><strong>Staff Clicks</strong></div>
-          <div>General Inquiries: info@staffclicks.com</div>
+          <div>Headquarters & Operations Hub: FJ6P+2M7, Kachery Road, Hathi Bhata, Ajmer, Rajasthan 305001</div>
+          <div>
+            General Inquiries: <a href="mailto:staffclicks@gmail.com" className="text-[#093965] font-semibold hover:underline">staffclicks@gmail.com</a>
+          </div>
         </div>
       </div>
     </div>
