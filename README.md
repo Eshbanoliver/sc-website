@@ -159,10 +159,7 @@ The build process produces a fully static Single Page Application (SPA) in the `
 ```
 
 
-- **Apache / Shared Hosting (cPanel / Hostinger)**: A preconfigured [public/.htaccess](public/.htaccess) handles automatic rewrites on build output.
-- **Vercel / Netlify / Cloudflare Pages**: Automatic single-page fallback rule to `/index.html`.
-- **Nginx**:
-  ```nginx
+-
   location / {
       try_files $uri $uri/ /index.html;
   }
